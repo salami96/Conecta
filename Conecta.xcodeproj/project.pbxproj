@@ -3,27 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37E328C7A35A94F1F9978F75 /* Pods_Conecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBE374B09DE93342F540675 /* Pods_Conecta.framework */; };
 		C061871B22A14778002A47DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871A22A14778002A47DE /* AppDelegate.swift */; };
-		C061871D22A14778002A47DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871C22A14778002A47DE /* ViewController.swift */; };
-		C061872022A14778002A47DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061871E22A14778002A47DE /* Main.storyboard */; };
+		C061871D22A14778002A47DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871C22A14778002A47DE /* LoginViewController.swift */; };
+		C061872022A14778002A47DE /* Agenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061871E22A14778002A47DE /* Agenda.storyboard */; };
 		C061872322A14778002A47DE /* Conecta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C061872122A14778002A47DE /* Conecta.xcdatamodeld */; };
 		C061872522A14779002A47DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C061872422A14779002A47DE /* Assets.xcassets */; };
 		C061872822A14779002A47DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061872622A14779002A47DE /* LaunchScreen.storyboard */; };
+		C061873422A14B9B002A47DE /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061873322A14B9B002A47DE /* Persistencia.swift */; };
+		C061873622A15729002A47DE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873522A15729002A47DE /* Login.storyboard */; };
+		C061873822A157D4002A47DE /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873722A157D4002A47DE /* Feed.storyboard */; };
+		C061873A22A158BA002A47DE /* Adicionar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873922A158BA002A47DE /* Adicionar.storyboard */; };
+		C061873C22A158E2002A47DE /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873B22A158E2002A47DE /* Perfil.storyboard */; };
+		C061873E22A15BDE002A47DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C061873D22A15BDE002A47DE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FD47A8D15C334B525288923 /* Pods-Conecta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conecta.debug.xcconfig"; path = "Target Support Files/Pods-Conecta/Pods-Conecta.debug.xcconfig"; sourceTree = "<group>"; };
+		A6A39D4DBA6C5EF9A64EBF35 /* Pods-Conecta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conecta.release.xcconfig"; path = "Target Support Files/Pods-Conecta/Pods-Conecta.release.xcconfig"; sourceTree = "<group>"; };
 		C061871722A14778002A47DE /* Conecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C061871A22A14778002A47DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C061871C22A14778002A47DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C061871F22A14778002A47DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C061871C22A14778002A47DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C061871F22A14778002A47DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Agenda.storyboard; sourceTree = "<group>"; };
 		C061872222A14778002A47DE /* Conecta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Conecta.xcdatamodel; sourceTree = "<group>"; };
 		C061872422A14779002A47DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C061872722A14779002A47DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C061872922A14779002A47DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C061873322A14B9B002A47DE /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
+		C061873522A15729002A47DE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C061873722A157D4002A47DE /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		C061873922A158BA002A47DE /* Adicionar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Adicionar.storyboard; sourceTree = "<group>"; };
+		C061873B22A158E2002A47DE /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
+		C061873D22A15BDE002A47DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEBE374B09DE93342F540675 /* Pods_Conecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E328C7A35A94F1F9978F75 /* Pods_Conecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2873BAD1A4F2D189F4D4D576 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FD47A8D15C334B525288923 /* Pods-Conecta.debug.xcconfig */,
+				A6A39D4DBA6C5EF9A64EBF35 /* Pods-Conecta.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9BAAC52EA050BD292A484AC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEBE374B09DE93342F540675 /* Pods_Conecta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C061870E22A14778002A47DE = {
 			isa = PBXGroup;
 			children = (
 				C061871922A14778002A47DE /* Conecta */,
 				C061871822A14778002A47DE /* Products */,
+				2873BAD1A4F2D189F4D4D576 /* Pods */,
+				9BAAC52EA050BD292A484AC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +92,53 @@
 		C061871922A14778002A47DE /* Conecta */ = {
 			isa = PBXGroup;
 			children = (
-				C061871A22A14778002A47DE /* AppDelegate.swift */,
-				C061871C22A14778002A47DE /* ViewController.swift */,
-				C061871E22A14778002A47DE /* Main.storyboard */,
+				C061873222A147AD002A47DE /* Support */,
+				C061873122A147A1002A47DE /* Controller */,
+				C061873022A1479A002A47DE /* View */,
+				C061872F22A14795002A47DE /* Model */,
 				C061872422A14779002A47DE /* Assets.xcassets */,
-				C061872622A14779002A47DE /* LaunchScreen.storyboard */,
-				C061872922A14779002A47DE /* Info.plist */,
-				C061872122A14778002A47DE /* Conecta.xcdatamodeld */,
 			);
 			path = Conecta;
+			sourceTree = "<group>";
+		};
+		C061872F22A14795002A47DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C061872122A14778002A47DE /* Conecta.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C061873022A1479A002A47DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C061871E22A14778002A47DE /* Agenda.storyboard */,
+				C061872622A14779002A47DE /* LaunchScreen.storyboard */,
+				C061873522A15729002A47DE /* Login.storyboard */,
+				C061873722A157D4002A47DE /* Feed.storyboard */,
+				C061873922A158BA002A47DE /* Adicionar.storyboard */,
+				C061873B22A158E2002A47DE /* Perfil.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C061873122A147A1002A47DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C061871C22A14778002A47DE /* LoginViewController.swift */,
+				C061873322A14B9B002A47DE /* Persistencia.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C061873222A147AD002A47DE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C061873D22A15BDE002A47DE /* GoogleService-Info.plist */,
+				C061871A22A14778002A47DE /* AppDelegate.swift */,
+				C061872922A14779002A47DE /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C061872C22A14779002A47DE /* Build configuration list for PBXNativeTarget "Conecta" */;
 			buildPhases = (
+				7EB80FE24DD7BBA525B208B0 /* [CP] Check Pods Manifest.lock */,
 				C061871322A14778002A47DE /* Sources */,
 				C061871422A14778002A47DE /* Frameworks */,
 				C061871522A14778002A47DE /* Resources */,
+				E69EA499D2D4FE62A105DC8F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,13 +201,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C061873822A157D4002A47DE /* Feed.storyboard in Resources */,
+				C061873E22A15BDE002A47DE /* GoogleService-Info.plist in Resources */,
+				C061873A22A158BA002A47DE /* Adicionar.storyboard in Resources */,
+				C061873622A15729002A47DE /* Login.storyboard in Resources */,
 				C061872822A14779002A47DE /* LaunchScreen.storyboard in Resources */,
+				C061873C22A158E2002A47DE /* Perfil.storyboard in Resources */,
 				C061872522A14779002A47DE /* Assets.xcassets in Resources */,
-				C061872022A14778002A47DE /* Main.storyboard in Resources */,
+				C061872022A14778002A47DE /* Agenda.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EB80FE24DD7BBA525B208B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Conecta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E69EA499D2D4FE62A105DC8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Conecta/Pods-Conecta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Conecta/Pods-Conecta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Conecta/Pods-Conecta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C061871322A14778002A47DE /* Sources */ = {
@@ -139,20 +262,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C061872322A14778002A47DE /* Conecta.xcdatamodeld in Sources */,
-				C061871D22A14778002A47DE /* ViewController.swift in Sources */,
+				C061871D22A14778002A47DE /* LoginViewController.swift in Sources */,
 				C061871B22A14778002A47DE /* AppDelegate.swift in Sources */,
+				C061873422A14B9B002A47DE /* Persistencia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C061871E22A14778002A47DE /* Main.storyboard */ = {
+		C061871E22A14778002A47DE /* Agenda.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C061871F22A14778002A47DE /* Base */,
 			);
-			name = Main.storyboard;
+			name = Agenda.storyboard;
 			sourceTree = "<group>";
 		};
 		C061872622A14779002A47DE /* LaunchScreen.storyboard */ = {
@@ -284,10 +408,11 @@
 		};
 		C061872D22A14779002A47DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FD47A8D15C334B525288923 /* Pods-Conecta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Conecta/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Conecta/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,10 +426,11 @@
 		};
 		C061872E22A14779002A47DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A39D4DBA6C5EF9A64EBF35 /* Pods-Conecta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Conecta/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Conecta/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
