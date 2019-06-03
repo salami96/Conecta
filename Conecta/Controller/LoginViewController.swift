@@ -11,13 +11,18 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 import FirebaseUI
+import GoogleSignIn
 
-class LoginViewController: UIViewController, FUIAuthDelegate {
+class LoginViewController: UIViewController, FUIAuthDelegate, /*GIDSignInDelegate,*/ GIDSignInUIDelegate {
+
+    
 
 
     // Criando referencia a autenticacao
     lazy var usuario = Auth.auth()
 
+    @IBOutlet weak var google: GIDSignInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //FirebaseApp.configure()
