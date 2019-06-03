@@ -45,11 +45,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rS-4d-GMN">
+                                <rect key="frame" x="184" y="249" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oFO-U8-skS"/>
                     </view>
                     <connections>
+                        <outlet property="email" destination="3rS-4d-GMN" id="QqN-Sc-HVL"/>
                         <outlet property="google" destination="9lJ-Hp-wSB" id="oAU-fr-1gy"/>
                         <outlet property="googleSignIn" destination="9lJ-Hp-wSB" id="aAx-bv-wNU"/>
                     </connections>

@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
 
     @IBOutlet weak var googleSignIn: GIDSignInButton!
     
+    @IBOutlet weak var email: UIButton!
     // Criando referencia a autenticacao
     lazy var usuario = Auth.auth()
 
