@@ -7,6 +7,8 @@ target 'Conecta' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Email'
   # Pods for Conecta
 
 end
