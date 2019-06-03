@@ -40,6 +40,8 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
         
         GIDSignIn.sharedInstance().uiDelegate = self
         
+        let style = GIDSignInButtonStyle.wide
+        google.style = style
         
         
         // Do any additional setup after loading the view.
