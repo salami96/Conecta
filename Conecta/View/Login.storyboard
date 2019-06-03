@@ -51,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="google" destination="9lJ-Hp-wSB" id="oAU-fr-1gy"/>
+                        <outlet property="googleSignIn" destination="9lJ-Hp-wSB" id="aAx-bv-wNU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVj-nP-Hcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
