@@ -132,14 +132,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lJ-Hp-wSB">
-                                <rect key="frame" x="47" y="182" width="320" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="entrar:" destination="cLH-QN-WpX" eventType="touchUpInside" id="RJr-dA-z5E"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rS-4d-GMN">
                                 <rect key="frame" x="47" y="263" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -148,19 +140,26 @@
                                     <action selector="entrarEmail:" destination="cLH-QN-WpX" eventType="touchUpInside" id="Spz-BY-zFn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgN-Dj-QSL" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="199" width="374" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="entrar:" destination="cLH-QN-WpX" eventType="valueChanged" id="wDX-kW-NXZ"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oFO-U8-skS"/>
                     </view>
                     <connections>
                         <outlet property="email" destination="3rS-4d-GMN" id="QqN-Sc-HVL"/>
-                        <outlet property="google" destination="9lJ-Hp-wSB" id="oAU-fr-1gy"/>
-                        <outlet property="googleSignIn" destination="9lJ-Hp-wSB" id="aAx-bv-wNU"/>
+                        <outlet property="google" destination="VgN-Dj-QSL" id="nzx-Ul-lA4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVj-nP-Hcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="17"/>
+            <point key="canvasLocation" x="1560.8695652173915" y="16.741071428571427"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L9W-bX-rj2">
