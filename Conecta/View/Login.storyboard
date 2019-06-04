@@ -149,7 +149,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oFO-U8-skS"/>
                     </view>
                     <connections>
@@ -177,7 +177,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nf-uH-5Hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="984"/>
+            <point key="canvasLocation" x="390" y="710"/>
         </scene>
         <!--Feed-->
         <scene sceneID="aMC-pe-FRn">
@@ -187,7 +187,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JM3-ay-V4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="913"/>
+            <point key="canvasLocation" x="1413" y="534"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="WdF-9W-x1D">
@@ -197,7 +197,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZ3-6Q-xOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227" y="1085"/>
+            <point key="canvasLocation" x="1414" y="789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L9W-bX-rj2">
