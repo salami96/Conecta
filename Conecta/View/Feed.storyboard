@@ -20,6 +20,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qlW-RQ-she"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="XuK-fp-mw9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2co-yL-SfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
