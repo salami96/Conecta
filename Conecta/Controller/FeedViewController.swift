@@ -11,6 +11,9 @@ import UIKit
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var searchResult: SearchController!
+    
+    
     var candies = [Candy]()
     var filteredCandies = [Candy]()
     let searchController = UISearchController(searchResultsController: nil)
@@ -24,6 +27,9 @@ class FeedViewController: UIViewController {
         definesPresentationContext = true
         table.dataSource = self
         table.delegate = self
+        searchController.searchBar.scopeButtonTitles = ["All", "Chocolate", "Hard", "Other"]
+        searchController.searchBar.delegate = self
+        table.tableFooterView = searchResult
         candies = [
             Candy(category:"Chocolate", name:"Chocolate Bar"),
             Candy(category:"Chocolate", name:"Chocolate Chip"),
@@ -50,14 +56,20 @@ class FeedViewController: UIViewController {
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filteredCandies = candies.filter({( candy : Candy) -> Bool in
-            return candy.name.lowercased().contains(searchText.lowercased())
+            let doesCategoryMatch = (scope == "All") || (candy.category == scope)
+            
+            if searchBarIsEmpty() {
+                return doesCategoryMatch
+            } else {
+                return doesCategoryMatch && candy.name.lowercased().contains(searchText.lowercased())
+            }
         })
-        
         table.reloadData()
     }
-
+    
     func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
+        let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive && (!searchBarIsEmpty() || searchBarScopeIsFiltering)
     }
     // Do any additional setup after loading the view.
 }
@@ -71,7 +83,9 @@ struct Candy{
 extension FeedViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
-        self.filterContentForSearchText(searchController.searchBar.text!)
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
     }
 }
 
@@ -79,17 +93,42 @@ extension FeedViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let nextScreenVC = segue.destination as? DetalheViewController, let data = sender as? Personagem {
+//            nextScreenVC.personagem = data
+//        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Detalhe", sender: nil)
+    }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if(velocity.y>0) {
+            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
+            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                print("Hide")
+            }, completion: nil)
+            
+        } else {
+            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
+                self.navigationController?.setNavigationBarHidden(false, animated: true)
+                print("Unhide")
+            }, completion: nil)
+        }
+    }
 }
 
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
+            searchResult.setIsFilteringToShow(filteredItemCount: filteredCandies.count, of: candies.count)
             return filteredCandies.count
         }
         
+        searchResult.setNotFiltering()
         return candies.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FeedTableViewCell else { fatalError() }
         let candy: Candy
@@ -102,5 +141,11 @@ extension FeedViewController: UITableViewDataSource {
         cell.categoria.text = candy.category
         
         return cell
+    }
+}
+
+extension FeedViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
 }
