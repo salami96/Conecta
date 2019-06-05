@@ -17,12 +17,13 @@
 		C061873422A14B9B002A47DE /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061873322A14B9B002A47DE /* Persistencia.swift */; };
 		C061873622A15729002A47DE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873522A15729002A47DE /* Login.storyboard */; };
 		C061873822A157D4002A47DE /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873722A157D4002A47DE /* Feed.storyboard */; };
-		C061873A22A158BA002A47DE /* Adicionar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873922A158BA002A47DE /* Adicionar.storyboard */; };
 		C061873C22A158E2002A47DE /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061873B22A158E2002A47DE /* Perfil.storyboard */; };
 		C061873E22A15BDE002A47DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C061873D22A15BDE002A47DE /* GoogleService-Info.plist */; };
 		C061874E22A7ED99002A47DE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061874D22A7ED99002A47DE /* FeedViewController.swift */; };
 		C061875022A7F249002A47DE /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061874F22A7F249002A47DE /* FeedTableViewCell.swift */; };
 		C061875422A7FB5F002A47DE /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061875322A7FB5F002A47DE /* SearchController.swift */; };
+		C061875622A82CD4002A47DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061875522A82CD4002A47DE /* Main.storyboard */; };
+		C061875822A82E58002A47DE /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061875722A82E58002A47DE /* PerfilViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +40,15 @@
 		C061873322A14B9B002A47DE /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
 		C061873522A15729002A47DE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C061873722A157D4002A47DE /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
-		C061873922A158BA002A47DE /* Adicionar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Adicionar.storyboard; sourceTree = "<group>"; };
 		C061873B22A158E2002A47DE /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
 		C061873D22A15BDE002A47DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C061874D22A7ED99002A47DE /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		C061874F22A7F249002A47DE /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		C061875322A7FB5F002A47DE /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		C061875522A82CD4002A47DE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C061875722A82E58002A47DE /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		C061875922A83248002A47DE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Agenda.strings"; sourceTree = "<group>"; };
+		C061875A22A83248002A47DE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FEBE374B09DE93342F540675 /* Pods_Conecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,8 +125,8 @@
 				C061871E22A14778002A47DE /* Agenda.storyboard */,
 				C061872622A14779002A47DE /* LaunchScreen.storyboard */,
 				C061873522A15729002A47DE /* Login.storyboard */,
+				C061875522A82CD4002A47DE /* Main.storyboard */,
 				C061873722A157D4002A47DE /* Feed.storyboard */,
-				C061873922A158BA002A47DE /* Adicionar.storyboard */,
 				C061873B22A158E2002A47DE /* Perfil.storyboard */,
 			);
 			path = View;
@@ -136,6 +140,7 @@
 				C061874D22A7ED99002A47DE /* FeedViewController.swift */,
 				C061874F22A7F249002A47DE /* FeedTableViewCell.swift */,
 				C061875322A7FB5F002A47DE /* SearchController.swift */,
+				C061875722A82E58002A47DE /* PerfilViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,8 +198,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = C061870E22A14778002A47DE;
 			productRefGroup = C061871822A14778002A47DE /* Products */;
@@ -213,10 +218,10 @@
 			files = (
 				C061873822A157D4002A47DE /* Feed.storyboard in Resources */,
 				C061873E22A15BDE002A47DE /* GoogleService-Info.plist in Resources */,
-				C061873A22A158BA002A47DE /* Adicionar.storyboard in Resources */,
 				C061873622A15729002A47DE /* Login.storyboard in Resources */,
 				C061872822A14779002A47DE /* LaunchScreen.storyboard in Resources */,
 				C061873C22A158E2002A47DE /* Perfil.storyboard in Resources */,
+				C061875622A82CD4002A47DE /* Main.storyboard in Resources */,
 				C061872522A14779002A47DE /* Assets.xcassets in Resources */,
 				C061872022A14778002A47DE /* Agenda.storyboard in Resources */,
 			);
@@ -294,6 +299,7 @@
 				C061875422A7FB5F002A47DE /* SearchController.swift in Sources */,
 				C061874E22A7ED99002A47DE /* FeedViewController.swift in Sources */,
 				C061871B22A14778002A47DE /* AppDelegate.swift in Sources */,
+				C061875822A82E58002A47DE /* PerfilViewController.swift in Sources */,
 				C061873422A14B9B002A47DE /* Persistencia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +311,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C061871F22A14778002A47DE /* Base */,
+				C061875922A83248002A47DE /* pt-BR */,
 			);
 			name = Agenda.storyboard;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C061872722A14779002A47DE /* Base */,
+				C061875A22A83248002A47DE /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -385,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
