@@ -11,7 +11,6 @@ import UIKit
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
-    @IBOutlet weak var searchResult: SearchController!
     
     
     var candies = [Candy]()
@@ -25,11 +24,11 @@ class FeedViewController: UIViewController {
         searchController.searchBar.placeholder = "O que quer aprender ou ensinar?"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        searchController.hidesNavigationBarDuringPresentation = true
         table.dataSource = self
         table.delegate = self
         searchController.searchBar.scopeButtonTitles = ["All", "Chocolate", "Hard", "Other"]
         searchController.searchBar.delegate = self
-        table.tableFooterView = searchResult
         candies = [
             Candy(category:"Chocolate", name:"Chocolate Bar"),
             Candy(category:"Chocolate", name:"Chocolate Chip"),
@@ -101,32 +100,44 @@ extension FeedViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "Detalhe", sender: nil)
     }
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if(velocity.y>0) {
-            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
-            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
-                
-                print("Hide")
-            }, completion: nil)
-            
-        } else {
-            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
-                print("Unhide")
-            }, completion: nil)
-        }
-    }
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        if(velocity.y>0) {
+//            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
+//            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
+//                self.navigationController?.setNavigationBarHidden(true, animated: true)
+//                print("Hide")
+//            }, completion: nil)
+//            UIView.animate(withDuration: 3, delay: 0, options: UIView.AnimationOptions(), animations: {
+////                for button in self.buttons{
+////                    button.isHidden = true
+////                }
+//                self.stackView.isHidden = true
+//            }, completion: nil)
+//        } else {
+//            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
+//                self.navigationController?.setNavigationBarHidden(false, animated: true)
+//                print("Unhide")
+//            }, completion: nil)
+//
+//            UIView.animate(withDuration: 3, delay: 0, options: UIView.AnimationOptions(), animations: {
+//                self.stackView.isHidden = false
+//            }, completion: nil)
+//
+////            UIView.animate(withDuration: 3, delay: 0, options: UIView.AnimationOptions(), animations: {
+//////                for button in self.buttons{
+//////                    button.isHidden = false
+//////                }
+////                self.stackView.animate
+////            }, completion: nil)
+//        }
+//    }
 }
 
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
-            searchResult.setIsFilteringToShow(filteredItemCount: filteredCandies.count, of: candies.count)
             return filteredCandies.count
         }
-        
-        searchResult.setNotFiltering()
         return candies.count
     }
     
