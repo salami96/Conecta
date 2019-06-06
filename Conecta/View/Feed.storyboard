@@ -135,6 +135,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Clw-we-zPN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="constraint" destination="V1f-9F-cdd" id="SjN-MA-7Yc"/>
                         <outlet property="table" destination="5zX-RU-PFg" id="haD-de-ySI"/>
                         <segue destination="ZmB-lh-ejQ" kind="show" identifier="Detalhe" id="Cmo-3F-JMf"/>
                     </connections>
@@ -158,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="1862" y="95"/>
         </scene>
-        <!--View Controller-->
+        <!--Ensinar View Controller-->
         <scene sceneID="7HW-FR-8zg">
             <objects>
-                <viewController id="Ttd-Qp-kak" sceneMemberID="viewController">
+                <viewController id="Ttd-Qp-kak" customClass="EnsinarViewController" customModule="Conecta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7K-qR-ewJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,15 +236,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1aO-td-Ael"/>
                     </view>
+                    <connections>
+                        <outlet property="data" destination="JgF-gF-Jrb" id="7n2-9p-mGW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD5-Ev-2Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="490" y="852"/>
         </scene>
-        <!--View Controller-->
+        <!--Aprender View Controller-->
         <scene sceneID="hKB-Ke-gPg">
             <objects>
-                <viewController id="ad5-FR-Fcl" sceneMemberID="viewController">
+                <viewController id="ad5-FR-Fcl" customClass="AprenderViewController" customModule="Conecta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhN-zk-9WD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,6 +315,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Na-jr-K7c"/>
                     </view>
+                    <connections>
+                        <outlet property="data" destination="nQO-bT-FZa" id="dcJ-L4-eYr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEh-Xm-QAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

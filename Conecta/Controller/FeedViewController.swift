@@ -11,6 +11,8 @@ import UIKit
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var constraint: NSLayoutConstraint!
+    
     
     
     var candies = [Candy]()
