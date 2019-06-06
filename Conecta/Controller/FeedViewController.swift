@@ -48,6 +48,7 @@ class FeedViewController: UIViewController {
             Candy(category:"Other", name:"Liquorice"),
             Candy(category:"Hard", name:"Toffee Apple")
         ]
+        //criarInteresse(titulo: "teste")
 
     }
     func searchBarIsEmpty() -> Bool {
