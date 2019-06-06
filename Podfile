@@ -6,6 +6,7 @@ target 'Conecta' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Email'

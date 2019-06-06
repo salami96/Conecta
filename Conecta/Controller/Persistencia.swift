@@ -8,8 +8,24 @@
 
 import UIKit
 import CoreData
+import FirebaseFirestore
 
 extension UIViewController {
+    
+
+    func criarInteresse(titulo: String){
+        let db = Firestore.firestore()
+        var ref: DocumentReference? = nil
+        ref = db.collection("Interesses").addDocument(data: [
+            "titulo" : titulo
+        ]) { err in
+            if let err = err {
+                print("Erro ao adicionar documento \(err)")
+            } else {
+                print("Documento adicionado com sucesso. ID: \(ref!.documentID)")
+            }
+        }
+    }
 //    func entrar(){
 //        let appDelegate = UIApplication.shared.delegate as? AppDelegate
 //        if let context = appDelegate?.persistentContainer.viewContext{
