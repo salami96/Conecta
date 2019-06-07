@@ -71,6 +71,9 @@
                                                 <rect key="frame" x="0.0" y="123" width="70" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Resgistrar"/>
+                                                <connections>
+                                                    <segue destination="tTf-1H-PF2" kind="presentation" id="idI-1x-U9K"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6r-oq-E5G">
                                                 <rect key="frame" x="80" y="123" width="70" height="30"/>
