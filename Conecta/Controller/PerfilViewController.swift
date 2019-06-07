@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import QuartzCore
 
 class PerfilViewController: UIViewController {
 
+    @IBOutlet weak var imagemPerfil: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //performSegue(withIdentifier: "entrar", sender: nil)
+//        if pegarUsuarioConectado() == nil {
+//            performSegue(withIdentifier: "entrar", sender: nil)
+//        }
+        imagemPerfil.layer.cornerRadius = 50;
+        imagemPerfil.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
+        imagemPerfil.layer.borderWidth = 1;
         
+        //performSegue(withIdentifier: "entrar", sender: nil)
         
         // Do any additional setup after loading the view.
     }

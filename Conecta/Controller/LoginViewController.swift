@@ -19,11 +19,12 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
 
     @IBOutlet weak var googleSignIn: GIDSignInButton!
     
-    @IBOutlet weak var email: UIButton!
-    // Criando referencia a autenticacao
+
     lazy var usuario = Auth.auth()
 
     @IBOutlet weak var google: GIDSignInButton!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var senha: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +51,16 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
 //
 //        }
     }
-    @IBAction func entrar(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn()
-
+    @IBAction func entrar(_ sender: UIButton) {
+        if let email = email.text, let senha = senha.text{
+            conectarUsuario(email: email, senha: senha)
+            dismiss(animated: true, completion: nil)
+        }
     }
+    //    @IBAction func entrar(_ sender: Any) {
+//        GIDSignIn.sharedInstance().signIn()
+//
+//    }
     //    func application(_ app: UIApplication, open url: URL,
 //                     options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
 //        let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String?
