@@ -14,17 +14,26 @@ extension UIViewController {
     func criarUsuario(email: String, senha: String, nome: String, sobrenome: String, telefone: String){
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         if let context = appDelegate?.persistentContainer.viewContext{
-            let usuario = Usuarios(context: context)
-            usuario.email = email
-            usuario.senha = senha
-            usuario.telefone = telefone
-            usuario.nome = nome
-            usuario.sobrenome = sobrenome
-            usuario.id = Int16(todosUsuarios().count)
-            do {
-                try context.save()
-            } catch let error {
-                print("Ocorreu um erro \(error)")
+            var erro = false
+            for usuario in todosUsuarios(){
+                if usuario.email == email {
+                    toShow(title: "Deu ruim! 😕", message: "Esse email já está cadastrado no Conecta!")
+                    erro = true
+                }
+            }
+            if !erro {
+                let usuario = Usuarios(context: context)
+                usuario.email = email
+                usuario.senha = senha
+                usuario.telefone = telefone
+                usuario.nome = nome
+                usuario.sobrenome = sobrenome
+                usuario.id = Int16(todosUsuarios().count)
+                do {
+                    try context.save()
+                } catch let error {
+                    print("Ocorreu um erro \(error)")
+                }
             }
         }
     }
@@ -44,7 +53,7 @@ extension UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         if let context = appDelegate?.persistentContainer.viewContext{
             let usuarios = todosUsuarios()
-            var conectado = pegarUsuarioConectado() ?? UsuarioConectado(context: context)
+            let conectado = pegarUsuarioConectado() ?? UsuarioConectado(context: context)
             for usuario in usuarios {
                 if usuario.email == email && usuario.senha == senha {
                     conectado.email = usuario.email
@@ -79,6 +88,19 @@ extension UIViewController {
         if let context = appDelegate?.persistentContainer.viewContext{
             let usuario = pegarUsuarioConectado() ?? UsuarioConectado(context: context)
             context.delete(usuario)
+            do {
+                try context.save()
+            } catch let error {
+                print("Ocorreu um erro \(error)")
+            }
+        }
+    }
+    func limpar(){
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = appDelegate?.persistentContainer.viewContext{
+            for usuario in todosUsuarios(){
+                context.delete(usuario)
+            }
             do {
                 try context.save()
             } catch let error {

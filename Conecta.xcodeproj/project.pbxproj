@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37E328C7A35A94F1F9978F75 /* Pods_Conecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBE374B09DE93342F540675 /* Pods_Conecta.framework */; };
+		C05470FA22AA9287003DB801 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05470F922AA9287003DB801 /* RegistroViewController.swift */; };
+		C05470FC22AA93C0003DB801 /* Validacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05470FB22AA93C0003DB801 /* Validacao.swift */; };
 		C061871B22A14778002A47DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871A22A14778002A47DE /* AppDelegate.swift */; };
 		C061871D22A14778002A47DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871C22A14778002A47DE /* LoginViewController.swift */; };
 		C061872022A14778002A47DE /* Agenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061871E22A14778002A47DE /* Agenda.storyboard */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		2FD47A8D15C334B525288923 /* Pods-Conecta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conecta.debug.xcconfig"; path = "Target Support Files/Pods-Conecta/Pods-Conecta.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A39D4DBA6C5EF9A64EBF35 /* Pods-Conecta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conecta.release.xcconfig"; path = "Target Support Files/Pods-Conecta/Pods-Conecta.release.xcconfig"; sourceTree = "<group>"; };
+		C05470F922AA9287003DB801 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		C05470FB22AA93C0003DB801 /* Validacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validacao.swift; sourceTree = "<group>"; };
 		C061871722A14778002A47DE /* Conecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C061871A22A14778002A47DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C061871C22A14778002A47DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				C061875722A82E58002A47DE /* PerfilViewController.swift */,
 				EB08F04222A9567B002FBB1C /* EnsinarViewController.swift */,
 				EB08F04422A95696002FBB1C /* AprenderViewController.swift */,
+				C05470F922AA9287003DB801 /* RegistroViewController.swift */,
+				C05470FB22AA93C0003DB801 /* Validacao.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			files = (
 				C061872322A14778002A47DE /* Conecta.xcdatamodeld in Sources */,
 				C061875022A7F249002A47DE /* FeedTableViewCell.swift in Sources */,
+				C05470FC22AA93C0003DB801 /* Validacao.swift in Sources */,
 				C061871D22A14778002A47DE /* LoginViewController.swift in Sources */,
 				C061875422A7FB5F002A47DE /* SearchController.swift in Sources */,
 				C061874E22A7ED99002A47DE /* FeedViewController.swift in Sources */,
@@ -310,6 +317,7 @@
 				C061875822A82E58002A47DE /* PerfilViewController.swift in Sources */,
 				EB08F04322A9567B002FBB1C /* EnsinarViewController.swift in Sources */,
 				C061873422A14B9B002A47DE /* Persistencia.swift in Sources */,
+				C05470FA22AA9287003DB801 /* RegistroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
