@@ -86,7 +86,7 @@
                                                     <constraint firstAttribute="width" constant="120" id="D4G-Yy-YWJ"/>
                                                     <constraint firstAttribute="height" constant="40" id="aac-Lj-9Vb"/>
                                                 </constraints>
-                                                <state key="normal" title="Resgistrar"/>
+                                                <state key="normal" title="Registrar"/>
                                                 <connections>
                                                     <segue destination="tTf-1H-PF2" kind="presentation" id="idI-1x-U9K"/>
                                                 </connections>

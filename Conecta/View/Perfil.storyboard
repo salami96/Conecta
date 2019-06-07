@@ -142,7 +142,7 @@
                     <navigationItem key="navigationItem" id="G8V-4i-svV">
                         <barButtonItem key="rightBarButtonItem" title="Sair" id="uWh-dV-ddr">
                             <connections>
-                                <action selector="sair:" destination="oes-fc-HTv" id="L7g-60-UTF"/>
+                                <action selector="sair:" destination="oes-fc-HTv" id="ANd-zO-OGK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
