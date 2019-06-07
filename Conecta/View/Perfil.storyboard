@@ -139,7 +139,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1m0-Jc-CVj"/>
                     </view>
-                    <navigationItem key="navigationItem" id="G8V-4i-svV"/>
+                    <navigationItem key="navigationItem" id="G8V-4i-svV">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="uWh-dV-ddr">
+                            <connections>
+                                <action selector="sair:" destination="oes-fc-HTv" id="L7g-60-UTF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imagemPerfil" destination="cFt-3h-Hw8" id="zO3-r0-Q9T"/>
@@ -185,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dag-wX-8K2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="775"/>
+            <point key="canvasLocation" x="277" y="794"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="c8W-Oh-FE7">
@@ -222,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xL3-9G-Srg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="794"/>
+            <point key="canvasLocation" x="1407" y="789"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="WCI-Fa-2tW">

@@ -61,22 +61,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estudante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2n-wl-Jns">
-                                                    <rect key="frame" x="85" y="37" width="65" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monitor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbX-dW-m6S">
-                                                    <rect key="frame" x="158" y="37" width="65" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -84,18 +68,16 @@
                                             <outlet property="categoria" destination="uMd-Zi-rBe" id="MhV-rw-pGk"/>
                                             <outlet property="horarios" destination="tx9-0G-BjK" id="2eV-L4-O8Z"/>
                                             <outlet property="img" destination="TO9-OR-wIb" id="Ny9-v7-IlC"/>
-                                            <outlet property="labelEstudante" destination="O2n-wl-Jns" id="B7n-V6-z8G"/>
-                                            <outlet property="labelMonitor" destination="NbX-dW-m6S" id="hOy-Ya-aPx"/>
                                             <outlet property="nome" destination="gjk-tj-roL" id="NQJ-m2-1QN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-yh-o4t">
-                                <rect key="frame" x="10" y="763" width="394" height="50"/>
+                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEp-zn-ei8">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
                                         <color key="backgroundColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="QUERO ENSINAR">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEL-C7-Ke4">
-                                        <rect key="frame" x="197" y="0.0" width="197" height="50"/>
+                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
                                         <color key="backgroundColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="QUERO APRENDER">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,11 +105,11 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5zX-RU-PFg" firstAttribute="leading" secondItem="qlW-RQ-she" secondAttribute="leading" id="51q-C3-9rT"/>
-                            <constraint firstItem="2hT-yh-o4t" firstAttribute="trailing" secondItem="qlW-RQ-she" secondAttribute="trailing" constant="-10" id="BkE-u8-hOr"/>
+                            <constraint firstItem="2hT-yh-o4t" firstAttribute="trailing" secondItem="qlW-RQ-she" secondAttribute="trailing" id="BkE-u8-hOr"/>
                             <constraint firstItem="5zX-RU-PFg" firstAttribute="top" secondItem="qlW-RQ-she" secondAttribute="top" id="Mxp-6l-WHo"/>
                             <constraint firstItem="qlW-RQ-she" firstAttribute="trailing" secondItem="5zX-RU-PFg" secondAttribute="trailing" id="QAL-aC-OLG"/>
                             <constraint firstItem="5zX-RU-PFg" firstAttribute="bottom" secondItem="qlW-RQ-she" secondAttribute="bottom" id="Th1-B0-6ZI"/>
-                            <constraint firstItem="2hT-yh-o4t" firstAttribute="leading" secondItem="qlW-RQ-she" secondAttribute="leading" constant="10" id="aqJ-Dy-56g"/>
+                            <constraint firstItem="2hT-yh-o4t" firstAttribute="leading" secondItem="qlW-RQ-she" secondAttribute="leading" id="aqJ-Dy-56g"/>
                             <constraint firstItem="qlW-RQ-she" firstAttribute="bottom" secondItem="2hT-yh-o4t" secondAttribute="bottom" id="grE-aY-SXK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qlW-RQ-she"/>
@@ -151,6 +133,24 @@
                     <view key="view" contentMode="scaleToFill" id="wQe-zZ-1LZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-3G-W5e">
+                                <rect key="frame" x="0.0" y="763" width="207" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="O QUE EU APRENDO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-b4-ZLu">
+                                <rect key="frame" x="207" y="763" width="207" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="O QUE EU ENSINO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="W52-a2-6w7"/>
                     </view>
