@@ -12,8 +12,11 @@ class PerfilViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //performSegue(withIdentifier: "entrar", sender: nil)
+        if pegarUsuarioConectado() == nil {
+            performSegue(withIdentifier: "entrar", sender: nil)
+        }
         
+        //performSegue(withIdentifier: "entrar", sender: nil)
         
         // Do any additional setup after loading the view.
     }
