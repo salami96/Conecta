@@ -53,8 +53,9 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
     }
     @IBAction func entrar(_ sender: UIButton) {
         if let email = email.text, let senha = senha.text{
-            conectarUsuario(email: email, senha: senha)
-            dismiss(animated: true, completion: nil)
+            if conectarUsuario(email: email, senha: senha){
+                dismiss(animated: true, completion: nil)
+            }
         }
     }
     @IBAction func cancelar(_ sender: Any) {

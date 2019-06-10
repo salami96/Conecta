@@ -32,7 +32,7 @@ class RegistroViewController: UIViewController {
     
     @IBAction func salvar(_ sender: UIButton) {
         if isNotNull(fields: fields) && senha.text! == confirmarSenha.text!{
-            criarUsuario(email: email.text!, senha: senha.text!, nome: nome.text!, sobrenome: sobrenome.text!, telefone: telefone.text!)
+            criarUsuario(email: email.text!, senha: senha.text!, nome: nome.text!, sobrenome: sobrenome.text!, telefone: telefone.text!, avatar: "Guanabara")
             toShow(title: "Bem vindo ao Conecta! 😊", message: "Agora você pode entrar no sistema")
             dismiss(animated: true, completion: nil)
         }

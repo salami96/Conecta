@@ -14,12 +14,14 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var imagemPerfil: UIImageView!
     @IBOutlet weak var blur: UIVisualEffectView!
     @IBOutlet weak var navigation: UINavigationItem!
+    var usuario = UsuarioConectado()
     
     
     override func viewWillAppear(_ animated: Bool) {
         if pegarUsuarioConectado() == nil {
             navigation.rightBarButtonItem?.isEnabled = false
             blur.isHidden = false
+            blur.isUserInteractionEnabled = true
             
             
             
@@ -27,6 +29,8 @@ class PerfilViewController: UIViewController {
         } else {
             navigation.rightBarButtonItem?.isEnabled = true
             blur.isHidden = true
+            usuario = pegarUsuarioConectado()!
+            blur.isUserInteractionEnabled = true
         }
         
     }
@@ -35,6 +39,7 @@ class PerfilViewController: UIViewController {
         for u in todosUsuarios(){
             print(u.email)
         }
+        imagemPerfil.image = UIImage(named: usuario.avatar ?? "Guanabara")
         imagemPerfil.layer.cornerRadius = 50;
         imagemPerfil.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
         imagemPerfil.layer.borderWidth = 1;

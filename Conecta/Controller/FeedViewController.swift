@@ -17,7 +17,23 @@ class FeedViewController: UIViewController {
     
     var candies = [Candy]()
     var filteredCandies = [Candy]()
+    var interesses = [Interesses]()
+    var interessesFiltrados = [Interesses]()
+    
+    
     let searchController = UISearchController(searchResultsController: nil)
+    fileprivate func criacaoDeUsuarios() {
+        //criarInteresse(titulo: "teste")
+        criarUsuario(email: "clark@email.com", senha: "123", nome: "Clark" , sobrenome: "Andrews", telefone: "5199997777", avatar: "avatar01")
+        criarUsuario(email: "olivia@email.com", senha: "123", nome: "Olivia", sobrenome: "Jones", telefone: "5188997766", avatar: "avatar02")
+        criarUsuario(email: "john@email.com", senha: "123", nome: "John", sobrenome: "Stuart", telefone: "5133335555", avatar: "avatar03")
+        criarUsuario(email: "mariana@email.com", senha: "123", nome: "Mariana", sobrenome: "Almeida", telefone: "5188883333", avatar: "avatar04")
+        criarUsuario(email: "matheus@email.com", senha: "123", nome: "Matheus", sobrenome: "Soares", telefone: "5177773333", avatar: "avatar05")
+        criarUsuario(email: "jessica@email.com", senha: "123", nome: "Jessica", sobrenome: "Oliveira", telefone: "5144442222", avatar: "avatar06")
+        criarUsuario(email: "antonio@email.com", senha: "123", nome: "Antonio", sobrenome: "Moraes", telefone: "5144449999", avatar: "avatar07")
+        criarUsuario(email: "sophia@email.com", senha: "123", nome: "Sophia", sobrenome: "Barbosa", telefone: "5122224444", avatar: "avatar10")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup the Search Controller
@@ -29,7 +45,7 @@ class FeedViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = true
         table.dataSource = self
         table.delegate = self
-        searchController.searchBar.scopeButtonTitles = ["All", "Chocolate", "Hard", "Other"]
+        searchController.searchBar.scopeButtonTitles = ["Todos", "Aprender", "Ensinar"]
         searchController.searchBar.delegate = self
         candies = [
             Candy(category:"Chocolate", name:"Chocolate Bar"),
@@ -48,15 +64,8 @@ class FeedViewController: UIViewController {
             Candy(category:"Other", name:"Liquorice"),
             Candy(category:"Hard", name:"Toffee Apple")
         ]
-        //criarInteresse(titulo: "teste")
-        criarUsuario(email: "clarkandrews@email.com", senha: "clarkandrews", nome: "Clark" , sobrenome: "Andrews", telefone: "5199997777")
-        criarUsuario(email: "oliviajones@email.com", senha: "oliviajones", nome: "Olivia", sobrenome: "Jones", telefone: "5188997766")
-        criarUsuario(email: "marianaalmeida@email.com", senha: "marianaalmeida", nome: "Mariana", sobrenome: "Almeida", telefone: "5188883333")
-        criarUsuario(email: "johnstuart@email.com", senha: "johnstuart", nome: "John", sobrenome: "Stuart", telefone: "5133335555")
-        criarUsuario(email: "jessicaoliveira@email.com", senha: "jessicaoliveira", nome: "Jessica", sobrenome: "Oliveira", telefone: "5144442222")
-        criarUsuario(email: "matheussoares@email.com", senha: "matheussoares", nome: "Matheus", sobrenome: "Soares", telefone: "5177773333")
-        criarUsuario(email: "sophiabarbosa@email.com", senha: "sophiabarbosa", nome: "Sophia", sobrenome: "Barbosa", telefone: "5122224444")
-        criarUsuario(email: "antoniomoraes@email.com", senha: "antoniomoraes", nome: "Antonio", sobrenome: "Moraes", telefone: "5144449999")
+        //limpar()
+        //criacaoDeUsuarios()
     }
     
     func searchBarIsEmpty() -> Bool {
@@ -72,6 +81,22 @@ class FeedViewController: UIViewController {
                 return doesCategoryMatch
             } else {
                 return doesCategoryMatch && candy.name.lowercased().contains(searchText.lowercased())
+            }
+        })
+        table.reloadData()
+    }
+    func filtrarConteudoPorTexto(_ texto: String, escopo: String = "Todos") {
+        var resultado = todosInteresses().filter({( interesse: Interesses) -> Bool in
+            var aprender = false
+            if escopo != "Todos" {
+                aprender = escopo == "Aprender"
+            }
+            let tipoIgual = (escopo == "Todos") || (interesse.aprender == aprender)
+            
+            if searchBarIsEmpty() {
+                return tipoIgual
+            } else {
+                return tipoIgual && (interesse.titulo?.lowercased().contains(texto.lowercased()))!
             }
         })
         table.reloadData()
@@ -96,17 +121,13 @@ extension FeedViewController: UISearchResultsUpdating {
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
         filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+        //filtrarConteudoPorTexto(searchController.searchBar.text!, escopo: scope)
     }
 }
 
 extension FeedViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let nextScreenVC = segue.destination as? DetalheViewController, let data = sender as? Personagem {
-//            nextScreenVC.personagem = data
-//        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "Detalhe", sender: nil)

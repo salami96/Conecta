@@ -12,6 +12,7 @@
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="UsuarioConectado" representedClassName="UsuarioConectado" syncable="YES" codeGenerationType="class">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,6 +21,7 @@
         <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Usuarios" representedClassName="Usuarios" syncable="YES" codeGenerationType="class">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
@@ -28,8 +30,8 @@
         <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UsuarioConectado" positionX="-45" positionY="0" width="128" height="135"/>
+        <element name="UsuarioConectado" positionX="-45" positionY="0" width="128" height="150"/>
         <element name="Interesses" positionX="-18" positionY="63" width="128" height="180"/>
-        <element name="Usuarios" positionX="9" positionY="99" width="128" height="135"/>
+        <element name="Usuarios" positionX="9" positionY="99" width="128" height="150"/>
     </elements>
 </model>

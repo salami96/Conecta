@@ -12,7 +12,7 @@ import FirebaseFirestore
 
 extension UIViewController {
     //Início das functions para interesses
-    func criarUsuario(email: String, senha: String, nome: String, sobrenome: String, telefone: String){
+    func criarUsuario(email: String, senha: String, nome: String, sobrenome: String, telefone: String, avatar: String){
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         if let context = appDelegate?.persistentContainer.viewContext{
             var erro = false
@@ -30,6 +30,7 @@ extension UIViewController {
                 usuario.nome = nome
                 usuario.sobrenome = sobrenome
                 usuario.id = Int16(todosUsuarios().count)
+                usuario.avatar = avatar
                 do {
                     try context.save()
                 } catch let error {
@@ -50,8 +51,9 @@ extension UIViewController {
         }
         return []
     }
-    func conectarUsuario(email: String, senha: String){
+    func conectarUsuario(email: String, senha: String) -> Bool{
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        var resultado = false
         if let context = appDelegate?.persistentContainer.viewContext{
             let usuarios = todosUsuarios()
             let conectado = pegarUsuarioConectado() ?? UsuarioConectado(context: context)
@@ -63,6 +65,7 @@ extension UIViewController {
                     conectado.senha = usuario.senha
                     conectado.sobrenome = usuario.sobrenome
                     conectado.telefone = usuario.telefone
+                    resultado = true
                 }
             }
             do {
@@ -71,6 +74,7 @@ extension UIViewController {
                 print("Ocorreu um erro \(error)")
             }
         }
+        return resultado
     }
     func pegarUsuarioConectado() -> UsuarioConectado?{
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
