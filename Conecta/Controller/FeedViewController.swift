@@ -49,8 +49,16 @@ class FeedViewController: UIViewController {
             Candy(category:"Hard", name:"Toffee Apple")
         ]
         //criarInteresse(titulo: "teste")
-
+        criarUsuario(email: "clarkandrews@email.com", senha: "clarkandrews", nome: "Clark" , sobrenome: "Andrews", telefone: "5199997777")
+        criarUsuario(email: "oliviajones@email.com", senha: "oliviajones", nome: "Olivia", sobrenome: "Jones", telefone: "5188997766")
+        criarUsuario(email: "marianaalmeida@email.com", senha: "marianaalmeida", nome: "Mariana", sobrenome: "Almeida", telefone: "5188883333")
+        criarUsuario(email: "johnstuart@email.com", senha: "johnstuart", nome: "John", sobrenome: "Stuart", telefone: "5133335555")
+        criarUsuario(email: "jessicaoliveira@email.com", senha: "jessicaoliveira", nome: "Jessica", sobrenome: "Oliveira", telefone: "5144442222")
+        criarUsuario(email: "matheussoares@email.com", senha: "matheussoares", nome: "Matheus", sobrenome: "Soares", telefone: "5177773333")
+        criarUsuario(email: "sophiabarbosa@email.com", senha: "sophiabarbosa", nome: "Sophia", sobrenome: "Barbosa", telefone: "5122224444")
+        criarUsuario(email: "antoniomoraes@email.com", senha: "antoniomoraes", nome: "Antonio", sobrenome: "Moraes", telefone: "5144449999")
     }
+    
     func searchBarIsEmpty() -> Bool {
         // Returns true if the text is empty or nil
         return searchController.searchBar.text?.isEmpty ?? true
