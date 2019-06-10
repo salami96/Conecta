@@ -19,13 +19,14 @@ class PerfilViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if pegarUsuarioConectado() == nil {
             navigation.rightBarButtonItem?.isEnabled = false
-            blur.addSubview(blur)
+            blur.isHidden = false
+            
             
             
             //performSegue(withIdentifier: "entrar", sender: nil)
         } else {
             navigation.rightBarButtonItem?.isEnabled = true
-            blur.removeFromSuperview()
+            blur.isHidden = true
         }
         
     }
