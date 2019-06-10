@@ -57,6 +57,9 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
             dismiss(animated: true, completion: nil)
         }
     }
+    @IBAction func cancelar(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     //    @IBAction func entrar(_ sender: Any) {
 //        GIDSignIn.sharedInstance().signIn()
 //

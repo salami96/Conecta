@@ -126,14 +126,62 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SA-5f-mh9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cbj-Lb-C98">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qgV-A7-akd">
+                                            <rect key="frame" x="20" y="290" width="374" height="145"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ooops... Você tem que entrar para aproveitar o máximo do Conecta!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZ0-oc-sra">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="0Np-zx-qr0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-PZ-W54">
+                                                    <rect key="frame" x="0.0" y="95" width="374" height="50"/>
+                                                    <color key="backgroundColor" red="0.44122481346130371" green="0.90960484743118286" blue="0.3292904794216156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="nEH-Te-Sgp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Entrar">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="entrar:" destination="oes-fc-HTv" eventType="touchUpInside" id="jTW-i3-QEZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qgV-A7-akd" firstAttribute="centerX" secondItem="cbj-Lb-C98" secondAttribute="centerX" id="IqJ-kf-ice"/>
+                                        <constraint firstItem="qgV-A7-akd" firstAttribute="leading" secondItem="cbj-Lb-C98" secondAttribute="leading" constant="20" id="J2A-kN-vDS"/>
+                                        <constraint firstAttribute="trailing" secondItem="qgV-A7-akd" secondAttribute="trailing" constant="20" id="LjK-PZ-KgV"/>
+                                        <constraint firstItem="qgV-A7-akd" firstAttribute="centerY" secondItem="cbj-Lb-C98" secondAttribute="centerY" id="fef-of-ZtT"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kZR-IS-naq" firstAttribute="top" secondItem="1m0-Jc-CVj" secondAttribute="top" constant="19" id="4lA-ah-Jh3"/>
+                            <constraint firstItem="6SA-5f-mh9" firstAttribute="leading" secondItem="1m0-Jc-CVj" secondAttribute="leading" id="6Zt-ua-gKz"/>
                             <constraint firstItem="1m0-Jc-CVj" firstAttribute="trailing" secondItem="dhu-4a-AEg" secondAttribute="trailing" id="84f-wr-zuB"/>
                             <constraint firstItem="kZR-IS-naq" firstAttribute="centerX" secondItem="dhu-4a-AEg" secondAttribute="centerX" id="FWI-ZQ-JFR"/>
                             <constraint firstItem="dhu-4a-AEg" firstAttribute="top" secondItem="kZR-IS-naq" secondAttribute="bottom" constant="73" id="Hgv-K1-Vnk"/>
+                            <constraint firstItem="1m0-Jc-CVj" firstAttribute="trailing" secondItem="6SA-5f-mh9" secondAttribute="trailing" id="Qv3-QA-d9o"/>
                             <constraint firstItem="1m0-Jc-CVj" firstAttribute="bottom" secondItem="dhu-4a-AEg" secondAttribute="bottom" id="Zgq-Yq-I1H"/>
+                            <constraint firstItem="6SA-5f-mh9" firstAttribute="top" secondItem="1m0-Jc-CVj" secondAttribute="top" id="ZoM-T2-Wko"/>
+                            <constraint firstItem="1m0-Jc-CVj" firstAttribute="bottom" secondItem="6SA-5f-mh9" secondAttribute="bottom" id="dP0-Ig-Zfg"/>
                             <constraint firstItem="kZR-IS-naq" firstAttribute="leading" secondItem="Htd-aB-p3c" secondAttribute="leadingMargin" id="oLF-vD-CXF"/>
                             <constraint firstItem="dhu-4a-AEg" firstAttribute="leading" secondItem="1m0-Jc-CVj" secondAttribute="leading" id="tb6-SG-Vvk"/>
                         </constraints>
@@ -148,7 +196,9 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="blur" destination="6SA-5f-mh9" id="TTt-Bz-eHJ"/>
                         <outlet property="imagemPerfil" destination="cFt-3h-Hw8" id="zO3-r0-Q9T"/>
+                        <outlet property="navigation" destination="G8V-4i-svV" id="Ueg-Sd-bJd"/>
                         <segue destination="Bq0-yF-Odt" kind="presentation" identifier="entrar" id="1dQ-sq-E1J"/>
                     </connections>
                 </viewController>

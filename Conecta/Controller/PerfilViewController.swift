@@ -12,13 +12,27 @@ import QuartzCore
 class PerfilViewController: UIViewController {
 
     @IBOutlet weak var imagemPerfil: UIImageView!
+    @IBOutlet weak var blur: UIVisualEffectView!
+    @IBOutlet weak var navigation: UINavigationItem!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if pegarUsuarioConectado() == nil {
+            navigation.rightBarButtonItem?.isEnabled = false
+            blur.addSubview(blur)
+            
+            
+            //performSegue(withIdentifier: "entrar", sender: nil)
+        } else {
+            navigation.rightBarButtonItem?.isEnabled = true
+            blur.removeFromSuperview()
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         for u in todosUsuarios(){
             print(u.email)
-        }
-        if pegarUsuarioConectado() == nil {
-            performSegue(withIdentifier: "entrar", sender: nil)
         }
         imagemPerfil.layer.cornerRadius = 50;
         imagemPerfil.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
@@ -33,6 +47,9 @@ class PerfilViewController: UIViewController {
     
     @IBAction func sair(_ sender: UIBarButtonItem) {
         sair()
+        performSegue(withIdentifier: "entrar", sender: nil)
+    }
+    @IBAction func entrar(_ sender: UIButton) {
         performSegue(withIdentifier: "entrar", sender: nil)
     }
     
