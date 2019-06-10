@@ -39,7 +39,7 @@ class PerfilViewController: UIViewController {
         for u in todosUsuarios(){
             print(u.email)
         }
-        imagemPerfil.image = UIImage(named: usuario.avatar ?? "Guanabara")
+        //imagemPerfil.image = UIImage(named: usuario.avatar ?? "Guanabara")
         imagemPerfil.layer.cornerRadius = 50;
         imagemPerfil.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
         imagemPerfil.layer.borderWidth = 1;
