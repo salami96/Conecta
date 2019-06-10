@@ -11,6 +11,7 @@ import CoreData
 import FirebaseFirestore
 
 extension UIViewController {
+    //Início das functions para interesses
     func criarUsuario(email: String, senha: String, nome: String, sobrenome: String, telefone: String){
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         if let context = appDelegate?.persistentContainer.viewContext{
@@ -108,21 +109,92 @@ extension UIViewController {
             }
         }
     }
-
+    //Fim das functions para usuarios
     
-
-//    func criarInteresse(titulo: String){
-//        let db = Firestore.firestore()
-//        var ref: DocumentReference? = nil
-//        ref = db.collection("Interesses").addDocument(data: [
-//            "titulo" : titulo
-//        ]) { err in
-//            if let err = err {
-//                print("Erro ao adicionar documento \(err)")
-//            } else {
-//                print("Documento adicionado com sucesso. ID: \(ref!.documentID)")
+    //Início das functions para interesses
+    func criarInteresse(titulo: String, aprender: Bool, descricao: String, horaCadastro: String, idAutor: Int16, nomeAutor: String, avaliacao: Double, horarios: String){
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = appDelegate?.persistentContainer.viewContext{
+            //var erro = false
+            //if !erro {
+                let interesse = Interesses(context: context)
+                interesse.titulo = titulo
+                interesse.aprender = aprender
+                interesse.descricao = descricao
+                interesse.horaCadastro = horaCadastro
+                interesse.horarios = horarios
+                interesse.idAutor = idAutor
+                interesse.nomeAutor = nomeAutor
+                interesse.avaliacao = avaliacao
+                interesse.id = Int16(todosInteresses().count)
+                do {
+                    try context.save()
+                } catch let error {
+                    print("Ocorreu um erro \(error)")
+                }
+            //}
+        }
+    }
+    func todosInteresses() -> [Interesses]{
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = appDelegate?.persistentContainer.viewContext{
+            let request: NSFetchRequest  = Interesses.fetchRequest()
+            do {
+                return try context.fetch(request)
+            } catch let error {
+                print("Ocorreu um erro: \(error)")
+            }
+        }
+        return []
+    }
+    func interessesDeAprender(aprender: Bool) -> [Interesses]{
+        let interesses = todosInteresses()
+        var resultado = [Interesses]()
+        for interesse in interesses{
+            if aprender == interesse.aprender {
+                resultado.append(interesse)
+            }
+        }
+        return resultado
+    }
+    func todosInteressesPorAutor(id: Int16) -> [Interesses]{
+        let interesses = todosInteresses()
+        var resultado = [Interesses]()
+        for interesse in interesses{
+            if id == interesse.idAutor {
+                resultado.append(interesse)
+            }
+        }
+        return resultado
+    }
+    func interessesPorAutorEAprender(id: Int16, aprender: Bool) -> [Interesses]{
+        let interesses = todosInteresses()
+        var resultado = [Interesses]()
+        for interesse in interesses{
+            if id == interesse.idAutor && aprender == interesse.aprender {
+                resultado.append(interesse)
+            }
+        }
+        return resultado
+    }
+//    func filtrarConteudoPorTexto(_ texto: String, escopo: String = "Todos") {
+//        var resultado = todosInteresses().filter({( interesse: Interesses) -> Bool in
+//            var aprender: Bool
+//            if escopo != "Todos" {
+//                aprender = escopo == "Aprender"
 //            }
-//        }
+//            let tipoIgual = (escopo == "Todos" || (interesse.aprender == aprender)
+//        })
+//        filteredCandies = candies.filter({( candy : Candy) -> Bool in
+//            let doesCategoryMatch = (scope == "All") || (candy.category == scope)
+//            
+//            if searchBarIsEmpty() {
+//                return doesCategoryMatch
+//            } else {
+//                return doesCategoryMatch && candy.name.lowercased().contains(searchText.lowercased())
+//            }
+//        })
+//        table.reloadData()
 //    }
 //    func entrar(){
 //        let appDelegate = UIApplication.shared.delegate as? AppDelegate
