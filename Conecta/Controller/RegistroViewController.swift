@@ -8,7 +8,15 @@
 
 import UIKit
 
-class RegistroViewController: UIViewController {
+protocol RegistroDelegate {
+    func trocaImg(value: String)
+}
+
+class RegistroViewController: UIViewController, RegistroDelegate {
+    func trocaImg(value: String) {
+        imageView.image = UIImage(named: value)
+    }
+    
 
     @IBOutlet var fields: [UITextField]!
     @IBOutlet weak var nome: UITextField!
@@ -17,6 +25,7 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var senha: UITextField!
     @IBOutlet weak var confirmarSenha: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -25,7 +34,12 @@ class RegistroViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+//    @IBAction func trocaAvatar(_ sender: UIButton) {
+//        let presentedVC = AvatarViewController()
+//        presentedVC.delegate = self
+//        present(presentedVC, animated: true, completion: nil)
+//    }
+    
     @IBAction func cancelar(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

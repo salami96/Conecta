@@ -167,7 +167,7 @@
                                                 <rect key="frame" x="189.5" y="0.0" width="184.5" height="60"/>
                                                 <state key="normal" title="Trocar avatar"/>
                                                 <connections>
-                                                    <segue destination="Shx-4o-GMy" kind="presentation" id="775-kN-pu7"/>
+                                                    <action selector="trocaAvatar:" destination="tTf-1H-PF2" eventType="touchUpInside" id="QjJ-QI-01X"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -323,6 +323,7 @@
                     <connections>
                         <outlet property="confirmarSenha" destination="FRf-AB-dAZ" id="jCB-i7-01y"/>
                         <outlet property="email" destination="rn0-Q1-bIp" id="Sxo-3s-jb4"/>
+                        <outlet property="imageView" destination="MsX-hP-ABd" id="Glw-tH-6OT"/>
                         <outlet property="nome" destination="icD-vy-GpW" id="iFR-Di-zxf"/>
                         <outlet property="senha" destination="IFy-yh-NL1" id="T3T-AT-gbH"/>
                         <outlet property="sobrenome" destination="7tM-LA-AII" id="WGb-QC-UQP"/>
@@ -346,64 +347,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-bY-X84">
-                                <rect key="frame" x="20" y="64" width="374" height="225"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mVA-rd-hKW">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar01" translatesAutoresizingMaskIntoConstraints="NO" id="fit-jS-T2h">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="75"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar02" translatesAutoresizingMaskIntoConstraints="NO" id="g3M-5n-RZh">
-                                                <rect key="frame" x="124.5" y="0.0" width="125" height="75"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar03" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-fj-g92">
-                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="75"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="nWf-63-MVQ"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="thk-lg-TlG">
-                                        <rect key="frame" x="0.0" y="75" width="374" height="75"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar04" translatesAutoresizingMaskIntoConstraints="NO" id="MIc-Xd-UBs">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="75"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar05" translatesAutoresizingMaskIntoConstraints="NO" id="QSy-Ku-c2r">
-                                                <rect key="frame" x="124.5" y="0.0" width="125" height="75"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar06" translatesAutoresizingMaskIntoConstraints="NO" id="Zi9-va-gUK">
-                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="75"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="cSN-nN-v16"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T4i-ud-cNZ">
-                                        <rect key="frame" x="0.0" y="150" width="374" height="75"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar07" translatesAutoresizingMaskIntoConstraints="NO" id="uUv-EU-Grm">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="75"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar08" translatesAutoresizingMaskIntoConstraints="NO" id="URI-Cx-Yph">
-                                                <rect key="frame" x="124.5" y="0.0" width="125" height="75"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar10" translatesAutoresizingMaskIntoConstraints="NO" id="I4W-3P-OdQ">
-                                                <rect key="frame" x="249.49999999999997" y="0.0" width="124.50000000000009" height="75"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="yfG-QI-n3f"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gME-YN-iQN">
-                                <rect key="frame" x="157" y="319" width="100" height="40"/>
+                                <rect key="frame" x="157" y="284" width="100" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="kf9-Oa-zKQ"/>
@@ -412,19 +357,62 @@
                                 <state key="normal" title="Cancelar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelar:" destination="Shx-4o-GMy" eventType="touchUpInside" id="1gy-GL-8Se"/>
+                                </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fB6-Rk-7dO">
+                                <rect key="frame" x="20" y="64" width="374" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="HqO-sG-Su2"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vW4-km-MQh">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="avatar" id="39f-ba-62l" customClass="AvatarCollectionViewCell" customModule="Conecta" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar01" translatesAutoresizingMaskIntoConstraints="NO" id="iVl-qT-CiG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="iVl-qT-CiG" secondAttribute="bottom" id="5dF-x1-g9i"/>
+                                            <constraint firstItem="iVl-qT-CiG" firstAttribute="top" secondItem="39f-ba-62l" secondAttribute="top" id="Km5-a9-hGG"/>
+                                            <constraint firstItem="iVl-qT-CiG" firstAttribute="leading" secondItem="39f-ba-62l" secondAttribute="leading" id="QbE-5K-bJJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="iVl-qT-CiG" secondAttribute="trailing" id="hBl-dh-2x1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="iVl-qT-CiG" id="W3t-16-p1X"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VC8-T2-QCV" firstAttribute="bottom" secondItem="Fna-bY-X84" secondAttribute="bottom" priority="250" constant="20" id="RVb-g2-EJV"/>
-                            <constraint firstItem="gME-YN-iQN" firstAttribute="top" secondItem="Fna-bY-X84" secondAttribute="bottom" constant="30" id="Rbr-Rf-b6S"/>
-                            <constraint firstItem="Fna-bY-X84" firstAttribute="leading" secondItem="VC8-T2-QCV" secondAttribute="leading" constant="20" id="hss-g9-Jvb"/>
-                            <constraint firstItem="VC8-T2-QCV" firstAttribute="trailing" secondItem="Fna-bY-X84" secondAttribute="trailing" constant="20" id="jnb-Jp-izT"/>
-                            <constraint firstItem="Fna-bY-X84" firstAttribute="top" secondItem="VC8-T2-QCV" secondAttribute="top" constant="20" id="uVO-jf-ooL"/>
-                            <constraint firstItem="gME-YN-iQN" firstAttribute="centerX" secondItem="r6X-4M-jyk" secondAttribute="centerX" id="z55-AN-ENw"/>
+                            <constraint firstItem="gME-YN-iQN" firstAttribute="bottom" secondItem="VC8-T2-QCV" secondAttribute="bottom" priority="250" constant="20" id="9FC-Gm-TFj"/>
+                            <constraint firstItem="fB6-Rk-7dO" firstAttribute="top" secondItem="VC8-T2-QCV" secondAttribute="top" constant="20" id="Gbd-sY-fAj"/>
+                            <constraint firstItem="gME-YN-iQN" firstAttribute="top" secondItem="fB6-Rk-7dO" secondAttribute="bottom" constant="20" id="QMI-7O-rjn"/>
+                            <constraint firstItem="fB6-Rk-7dO" firstAttribute="leading" secondItem="VC8-T2-QCV" secondAttribute="leading" constant="20" id="W6l-v9-9Hx"/>
+                            <constraint firstItem="gME-YN-iQN" firstAttribute="centerX" secondItem="r6X-4M-jyk" secondAttribute="centerX" id="rYO-l0-cEo"/>
+                            <constraint firstItem="VC8-T2-QCV" firstAttribute="trailing" secondItem="fB6-Rk-7dO" secondAttribute="trailing" constant="20" id="uTg-2Y-eB3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VC8-T2-QCV"/>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="fB6-Rk-7dO" id="E00-p6-6Bx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjv-KT-0PE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -433,13 +421,6 @@
     </scenes>
     <resources>
         <image name="avatar01" width="200" height="200"/>
-        <image name="avatar02" width="200" height="200"/>
-        <image name="avatar03" width="200" height="200"/>
-        <image name="avatar04" width="200" height="200"/>
-        <image name="avatar05" width="200" height="200"/>
-        <image name="avatar06" width="200" height="200"/>
-        <image name="avatar07" width="200" height="200"/>
         <image name="avatar08" width="200" height="200"/>
-        <image name="avatar10" width="237" height="250"/>
     </resources>
 </document>
