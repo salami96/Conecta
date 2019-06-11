@@ -14,42 +14,44 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var imagemPerfil: UIImageView!
     @IBOutlet weak var blur: UIVisualEffectView!
     @IBOutlet weak var navigation: UINavigationItem!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var telefone: UILabel!
+    
     var usuario = UsuarioConectado()
     
     
     override func viewWillAppear(_ animated: Bool) {
+        recarregaUsuario()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        for u in todosUsuarios(){
+            print(u.nome! + u.avatar! + u.email! + "\(u.id)")
+        }
+        imagemPerfil.layer.cornerRadius = 50;
+        imagemPerfil.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
+        imagemPerfil.layer.borderWidth = 1;
+    }
+
+    public func recarregaUsuario(){
         if pegarUsuarioConectado() == nil {
             navigation.rightBarButtonItem?.isEnabled = false
             blur.isHidden = false
             blur.isUserInteractionEnabled = true
-            
-            
-            
-            //performSegue(withIdentifier: "entrar", sender: nil)
         } else {
             navigation.rightBarButtonItem?.isEnabled = true
             blur.isHidden = true
             usuario = pegarUsuarioConectado()!
             blur.isUserInteractionEnabled = true
+            imagemPerfil.image = UIImage(named: usuario.avatar ?? "account-outline")
+            email.text = usuario.email
+            telefone.text = usuario.telefone
+            nome.text = usuario.nome! + " " + usuario.sobrenome!
         }
-        
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        for u in todosUsuarios(){
-            print(u.email)
-        }
-        //imagemPerfil.image = UIImage(named: usuario.avatar ?? "Guanabara")
-        imagemPerfil.layer.cornerRadius = 50;
-        imagemPerfil.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
-        imagemPerfil.layer.borderWidth = 1;
-        
 
-        
-        //performSegue(withIdentifier: "entrar", sender: nil)
-        
-        // Do any additional setup after loading the view.
-    }
     
     @IBAction func sair(_ sender: UIBarButtonItem) {
         sair()

@@ -55,6 +55,8 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
         if let email = email.text, let senha = senha.text{
             if conectarUsuario(email: email, senha: senha){
                 dismiss(animated: true, completion: nil)
+            } else {
+                toShow(title: "Deu ruim! 😕", message: "Email ou  senha incorreta")
             }
         }
     }

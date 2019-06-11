@@ -197,8 +197,11 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="blur" destination="6SA-5f-mh9" id="TTt-Bz-eHJ"/>
+                        <outlet property="email" destination="4JK-a7-UlO" id="u5S-Eh-scx"/>
                         <outlet property="imagemPerfil" destination="cFt-3h-Hw8" id="zO3-r0-Q9T"/>
                         <outlet property="navigation" destination="G8V-4i-svV" id="Ueg-Sd-bJd"/>
+                        <outlet property="nome" destination="HJ5-h7-fZQ" id="RDp-pg-pLE"/>
+                        <outlet property="telefone" destination="uUg-Mg-Gul" id="2sJ-bd-CBF"/>
                         <segue destination="Bq0-yF-Odt" kind="presentation" identifier="entrar" id="1dQ-sq-E1J"/>
                     </connections>
                 </viewController>
