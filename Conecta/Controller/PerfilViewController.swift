@@ -17,11 +17,13 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var telefone: UILabel!
+    @IBOutlet weak var capa: UIImageView!
     
     var usuario = UsuarioConectado()
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
         recarregaUsuario()
     }
 
@@ -49,6 +51,8 @@ class PerfilViewController: UIViewController {
             email.text = usuario.email
             telefone.text = usuario.telefone
             nome.text = usuario.nome! + " " + usuario.sobrenome!
+            var resto = usuario.id % 2 == 0
+            capa.image = UIImage(named: resto ? "papel10" : "papel40")
         }
     }
 
