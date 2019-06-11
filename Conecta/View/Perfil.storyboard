@@ -197,6 +197,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="blur" destination="6SA-5f-mh9" id="TTt-Bz-eHJ"/>
+                        <outlet property="capa" destination="k8n-XN-0ys" id="pqs-aO-Rdk"/>
                         <outlet property="email" destination="4JK-a7-UlO" id="u5S-Eh-scx"/>
                         <outlet property="imagemPerfil" destination="cFt-3h-Hw8" id="zO3-r0-Q9T"/>
                         <outlet property="navigation" destination="G8V-4i-svV" id="Ueg-Sd-bJd"/>

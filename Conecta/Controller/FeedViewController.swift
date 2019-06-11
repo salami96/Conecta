@@ -33,7 +33,19 @@ class FeedViewController: UIViewController {
         criarUsuario(email: "antonio@email.com", senha: "123", nome: "Antonio", sobrenome: "Moraes", telefone: "5144449999", avatar: "avatar07")
         criarUsuario(email: "sophia@email.com", senha: "123", nome: "Sophia", sobrenome: "Barbosa", telefone: "5122224444", avatar: "avatar10")
     }
-    
+    func criacaoInteresses() {
+        criarInteresse(titulo: "Java", aprender: false, descricao: "Programação orientada à objeto, encapsulamento, herança, polimorfismo", horaCadastro: "5/28/2019 2:23:15 PM", idAutor: 1, nomeAutor: "Clark Andrews", avaliacao: 0, horarios: "6/28/2019 8:30:15 AM")
+        criarInteresse(titulo: "Química Orgânica", aprender: true, descricao: "Cadeias carbônicas, ressonância e anéis aromáticos", horaCadastro: "5/16/2019 10:23:15 PM", idAutor: 6, nomeAutor: "Jessica Oliveira", avaliacao: 0, horarios: "6/15/2019 11:00:15 AM")
+        criarInteresse(titulo: "Aulas de violão", aprender: false, descricao: "Aulas para iniciantes", horaCadastro: "4/10/2019 7:35:15 PM", idAutor: 10, nomeAutor: "Sophia Barbosa", avaliacao: 0, horarios: "6/18/2019 9:30:00 AM")
+        criarInteresse(titulo: "Aulas de Inglês", aprender: false, descricao: "Aulas do básico ao avançado: leitura, escrita e conversação", horaCadastro: "2/11/2019 4:15:34 PM", idAutor: 2, nomeAutor: "Olivia Jones", avaliacao: 0, horarios: "6/27/2019 10:00:00 AM")
+        criarInteresse(titulo: "Kotlin", aprender: true, descricao: "Desenvolvimento mobile", horaCadastro: "3/13/2019 5:57:12 PM", idAutor: 1, nomeAutor: "Clark Andrews", avaliacao: 0, horarios: "6/18/2019 8:30:00 PM")
+        criarInteresse(titulo: "Banco de dados", aprender: false, descricao: "Aulas sobre banco de dados com SQL", horaCadastro: "4/11/2019 1:12:13 PM", idAutor: 5, nomeAutor: "Matheus Soares", avaliacao: 0, horarios: "7/15/2019 9:00:00 AM")
+        criarInteresse(titulo: "Swift", aprender: false, descricao: "Desenvolvimento mobile para IOS", horaCadastro: "8/19/2019 2:55:17 PM", idAutor: 3, nomeAutor: "John Stuart", avaliacao: 0, horarios: "8/2/2019 2:30:00 PM")
+        criarInteresse(titulo: "Física", aprender: true, descricao: "Mecânica Quântica", horaCadastro: "10/6/2019 7:09:03 PM", idAutor: 7, nomeAutor: "Antonio Moraes", avaliacao: 0, horarios: "10/25/2019 11:30:00 AM")
+        criarInteresse(titulo: "Aulas de Cálculo 2", aprender: false, descricao: "Derivada Parcial, Integral dupla e tripla", horaCadastro: "1/10/2019 3:15:14 PM", idAutor: 4, nomeAutor: "Mariana Almeida", avaliacao: 0, horarios: "2/14/2019 9:00:00 AM")
+        criarInteresse(titulo: "Matemática Básica", aprender: false, descricao: "Matemática para ensino médio", horaCadastro: "9/12/2019 1:27:18 PM", idAutor: 7, nomeAutor: "Antonio Moraes", avaliacao: 0, horarios: "11/11/2019 2:00:00 PM")
+        criarInteresse(titulo: "Aulas de Francês", aprender: true, descricao: "Francês básico para conversação", horaCadastro: "1/5/2019 11:34:56 PM", idAutor: 2, nomeAutor: "Olivia Jones", avaliacao: 0, horarios: "3/29/2019 9:00:00 AM")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup the Search Controller
