@@ -94,20 +94,29 @@ extension UIViewController {
         return nil
     }
     public func bloquerarAcesso(view: UIView){
-        let blur = UIVisualEffectView()
-        let texto = UILabel()
-        let botao = UIButton()
-        if pegarUsuarioConectado() == nil {
-            texto.text = "Ooops... Você tem que entrar para aproveitar o máximo do Conecta!"
-            botao.backgroundColor = #colorLiteral(red: 0.4412248135, green: 0.9096048474, blue: 0.3292904794, alpha: 1)
-            botao.titleLabel?.text = "Entrar"
-            blur.isHidden = false
-            blur.isUserInteractionEnabled = true
-        } else {
-            blur.isHidden = true
-            blur.isUserInteractionEnabled = true
-        }
-        view.addSubview(blur)
+//        let blur = UIVisualEffectView()
+//        let texto = UILabel()
+//        let botao = UIButton()
+//        texto.text = "Ooops... Você tem que entrar para aproveitar o máximo do Conecta!"
+//        botao.backgroundColor = #colorLiteral(red: 0.4412248135, green: 0.9096048474, blue: 0.3292904794, alpha: 1)
+//        botao.titleLabel?.text = "Entrar"
+//        blur.contentView.addSubview(texto)
+//        blur.contentView.addSubview(botao)
+//
+//        if pegarUsuarioConectado() == nil {
+//            blur.isHidden = false
+//            blur.isUserInteractionEnabled = true
+//        } else {
+//            blur.isHidden = true
+//            blur.isUserInteractionEnabled = true
+//        }
+//        view.addSubview(blur)
+//        NSLayoutConstraint.activate([
+//            blur.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+//            blur.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+//            blur.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+//            blur.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+//            ])
     }
     func pegarAvatar(id: Int16) -> String {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate

@@ -20,7 +20,7 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var capa: UIImageView!
     
     var usuario = UsuarioConectado()
-    
+    var blurReference = Blur()
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -38,9 +38,11 @@ class PerfilViewController: UIViewController {
     }
 
     public func recarregaUsuario(){
-        bloquerarAcesso(view: view)
+
         if pegarUsuarioConectado() == nil {
             navigation.rightBarButtonItem?.isEnabled = false
+            view.addSubview(blurReference)
+            //view.addSubview(blur)
             //blur.isHidden = false
             //blur.isUserInteractionEnabled = true
         } else {
