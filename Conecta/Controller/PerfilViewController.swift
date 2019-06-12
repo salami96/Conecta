@@ -23,7 +23,7 @@ class PerfilViewController: UIViewController {
     var blurReference = Blur()
     
     override func viewWillAppear(_ animated: Bool) {
-        
+       
         recarregaUsuario()
     }
 
@@ -32,6 +32,8 @@ class PerfilViewController: UIViewController {
         for u in todosUsuarios(){
             print(u.nome! + u.avatar! + u.email! + "\(u.id)")
         }
+        blurReference = Blur(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height))
+        blurReference.onClick = presentLogin
         imagemPerfil.layer.cornerRadius = 50;
         imagemPerfil.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0);
         imagemPerfil.layer.borderWidth = 1;
@@ -41,11 +43,12 @@ class PerfilViewController: UIViewController {
 
         if pegarUsuarioConectado() == nil {
             navigation.rightBarButtonItem?.isEnabled = false
-            view.addSubview(blurReference)
-            //view.addSubview(blur)
-            //blur.isHidden = false
-            //blur.isUserInteractionEnabled = true
+            if blurReference.superview == nil {
+                view.addSubview(blurReference)
+                view.bringSubviewToFront(blurReference)
+            }
         } else {
+            blurReference.removeFromSuperview()
             navigation.rightBarButtonItem?.isEnabled = true
             usuario = pegarUsuarioConectado()!
             imagemPerfil.image = UIImage(named: usuario.avatar ?? "account-outline")
@@ -65,6 +68,9 @@ class PerfilViewController: UIViewController {
         performSegue(withIdentifier: "entrar", sender: nil)
     }
     @IBAction func entrar(_ sender: UIButton) {
+        performSegue(withIdentifier: "entrar", sender: nil)
+    }
+    func presentLogin(){
         performSegue(withIdentifier: "entrar", sender: nil)
     }
     
