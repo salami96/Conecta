@@ -15,8 +15,10 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var avaliacao: UILabel!
     @IBOutlet weak var categoria: UILabel!
     @IBOutlet weak var horarios: UILabel!
-    var star: UIImageView!
-    var icone: UIImageView!
+    @IBOutlet weak var linha: UIView!
+    @IBOutlet weak var star: UIImageView!
+    @IBOutlet weak var icon: UIImageView!
+    
     
     
     override func awakeFromNib() {

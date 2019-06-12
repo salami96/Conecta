@@ -20,7 +20,7 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var capa: UIImageView!
     
     var usuario = UsuarioConectado()
-    
+    var blurReference = Blur()
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -38,21 +38,24 @@ class PerfilViewController: UIViewController {
     }
 
     public func recarregaUsuario(){
+
         if pegarUsuarioConectado() == nil {
             navigation.rightBarButtonItem?.isEnabled = false
-            blur.isHidden = false
-            blur.isUserInteractionEnabled = true
+            view.addSubview(blurReference)
+            //view.addSubview(blur)
+            //blur.isHidden = false
+            //blur.isUserInteractionEnabled = true
         } else {
             navigation.rightBarButtonItem?.isEnabled = true
-            blur.isHidden = true
             usuario = pegarUsuarioConectado()!
-            blur.isUserInteractionEnabled = true
             imagemPerfil.image = UIImage(named: usuario.avatar ?? "account-outline")
             email.text = usuario.email
             telefone.text = usuario.telefone
             nome.text = usuario.nome! + " " + usuario.sobrenome!
             var resto = usuario.id % 2 == 0
             capa.image = UIImage(named: resto ? "papel10" : "papel40")
+            //blur.isHidden = true
+//            blur.isUserInteractionEnabled = true
         }
     }
 

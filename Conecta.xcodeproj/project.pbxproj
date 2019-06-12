@@ -13,6 +13,8 @@
 		C05470FC22AA93C0003DB801 /* Validacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05470FB22AA93C0003DB801 /* Validacao.swift */; };
 		C05470FE22AFD6E5003DB801 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05470FD22AFD6E5003DB801 /* AvatarViewController.swift */; };
 		C054710022AFE8B7003DB801 /* AvatarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05470FF22AFE8B7003DB801 /* AvatarCollectionViewCell.swift */; };
+		C054710222B15287003DB801 /* blur.xib in Resources */ = {isa = PBXBuildFile; fileRef = C054710122B15287003DB801 /* blur.xib */; };
+		C054710422B15551003DB801 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710322B15551003DB801 /* Blur.swift */; };
 		C061871B22A14778002A47DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871A22A14778002A47DE /* AppDelegate.swift */; };
 		C061871D22A14778002A47DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871C22A14778002A47DE /* LoginViewController.swift */; };
 		C061872022A14778002A47DE /* Agenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061871E22A14778002A47DE /* Agenda.storyboard */; };
@@ -41,6 +43,8 @@
 		C05470FB22AA93C0003DB801 /* Validacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validacao.swift; sourceTree = "<group>"; };
 		C05470FD22AFD6E5003DB801 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		C05470FF22AFE8B7003DB801 /* AvatarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionViewCell.swift; sourceTree = "<group>"; };
+		C054710122B15287003DB801 /* blur.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = blur.xib; sourceTree = "<group>"; };
+		C054710322B15551003DB801 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		C061871722A14778002A47DE /* Conecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C061871A22A14778002A47DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C061871C22A14778002A47DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				C061875522A82CD4002A47DE /* Main.storyboard */,
 				C061873722A157D4002A47DE /* Feed.storyboard */,
 				C061873B22A158E2002A47DE /* Perfil.storyboard */,
+				C054710122B15287003DB801 /* blur.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				1509804322AABFEF00B6019D /* FeedDetailViewController.swift */,
 				C05470FD22AFD6E5003DB801 /* AvatarViewController.swift */,
 				C05470FF22AFE8B7003DB801 /* AvatarCollectionViewCell.swift */,
+				C054710322B15551003DB801 /* Blur.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 				C061872822A14779002A47DE /* LaunchScreen.storyboard in Resources */,
 				C061873C22A158E2002A47DE /* Perfil.storyboard in Resources */,
 				C061875622A82CD4002A47DE /* Main.storyboard in Resources */,
+				C054710222B15287003DB801 /* blur.xib in Resources */,
 				C061872522A14779002A47DE /* Assets.xcassets in Resources */,
 				C061872022A14778002A47DE /* Agenda.storyboard in Resources */,
 			);
@@ -325,6 +332,7 @@
 				EB08F04522A95696002FBB1C /* AprenderViewController.swift in Sources */,
 				C054710022AFE8B7003DB801 /* AvatarCollectionViewCell.swift in Sources */,
 				C061871B22A14778002A47DE /* AppDelegate.swift in Sources */,
+				C054710422B15551003DB801 /* Blur.swift in Sources */,
 				C061875822A82E58002A47DE /* PerfilViewController.swift in Sources */,
 				EB08F04322A9567B002FBB1C /* EnsinarViewController.swift in Sources */,
 				C05470FE22AFD6E5003DB801 /* AvatarViewController.swift in Sources */,

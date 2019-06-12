@@ -56,7 +56,7 @@ class FeedViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = true
         table.dataSource = self
         table.delegate = self
-        searchController.searchBar.scopeButtonTitles = ["Todos", "Aprender", "Ensinar"]
+        searchController.searchBar.scopeButtonTitles = ["Todos", "Ensinar", "Aprender"]
         searchController.searchBar.delegate = self
         candies = [
             Candy(category:"Chocolate", name:"Chocolate Bar"),
@@ -208,13 +208,16 @@ extension FeedViewController: UITableViewDataSource {
             cell.categoria.text = "Quer aprender: " + interesse.titulo!
             cell.avaliacao.text = ""
             cell.star.isHidden = true
-            cell.icone.image = UIImage(named: "aprender")
+            cell.icon.image = UIImage(named: "Aluno")
+            cell.linha.backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)
         } else {
             cell.categoria.text = "Quer ensinar: " + interesse.titulo!
             cell.avaliacao.text = "\(interesse.avaliacao)"
             cell.star.isHidden = false
-            cell.star.image = UIImage(named: interesse.avaliacao > 0 ? "estrelaAmarela" : "estrelaCinza")
-            cell.icone.image = UIImage(named: "ensinar")
+            cell.star.image = UIImage(named: interesse.avaliacao > 0 ? "EstrelaAmarela" : "Estrelacinza")
+            cell.avaliacao.textColor = interesse.avaliacao > 0 ? #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.icon.image = UIImage(named: "Professor")
+            cell.linha.backgroundColor = #colorLiteral(red: 0.3529411765, green: 0.7843137255, blue: 0.9803921569, alpha: 1)
         }
         cell.img.image = UIImage(named: pegarAvatar(id: interesse.idAutor))
         cell.horarios.text = interesse.horaCadastro
