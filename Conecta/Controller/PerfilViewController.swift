@@ -28,7 +28,7 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var editContatoButton: UIButton!
     
     var usuario = UsuarioConectado()
-//    var blurReference = Blur()
+    var blurReference = Blur()
     
     override func viewWillAppear(_ animated: Bool) {
        
