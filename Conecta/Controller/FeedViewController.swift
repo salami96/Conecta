@@ -204,18 +204,18 @@ extension FeedViewController: UITableViewDataSource {
         
         
         cell.nome.text = interesse.nomeAutor
-        if interesse.aprender {
-            cell.categoria.text = "Quer aprender: " + interesse.titulo!
-            cell.avaliacao.text = ""
-            cell.star.isHidden = true
-            cell.icone.image = UIImage(named: "aprender")
-        } else {
-            cell.categoria.text = "Quer ensinar: " + interesse.titulo!
-            cell.avaliacao.text = "\(interesse.avaliacao)"
-            cell.star.isHidden = false
-            cell.star.image = UIImage(named: interesse.avaliacao > 0 ? "estrelaAmarela" : "estrelaCinza")
-            cell.icone.image = UIImage(named: "ensinar")
-        }
+//        if interesse.aprender {
+//            cell.categoria.text = "Quer aprender: " + interesse.titulo!
+//            cell.avaliacao.text = ""
+//            cell.star.isHidden = true
+//            cell.icone.image = UIImage(named: "aprender")
+//        } else {
+//            cell.categoria.text = "Quer ensinar: " + interesse.titulo!
+//            cell.avaliacao.text = "\(interesse.avaliacao)"
+//            cell.star.isHidden = false
+//            cell.star.image = UIImage(named: interesse.avaliacao > 0 ? "estrelaAmarela" : "estrelaCinza")
+//            cell.icone.image = UIImage(named: "ensinar")
+//        }
         cell.img.image = UIImage(named: pegarAvatar(id: interesse.idAutor))
         cell.horarios.text = interesse.horaCadastro
         return cell

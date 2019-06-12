@@ -40,13 +40,13 @@ class PerfilViewController: UIViewController {
     public func recarregaUsuario(){
         if pegarUsuarioConectado() == nil {
             navigation.rightBarButtonItem?.isEnabled = false
-            blur.isHidden = false
-            blur.isUserInteractionEnabled = true
+//            blur.isHidden = false
+//            blur.isUserInteractionEnabled = true
         } else {
             navigation.rightBarButtonItem?.isEnabled = true
-            blur.isHidden = true
+//            blur.isHidden = true
             usuario = pegarUsuarioConectado()!
-            blur.isUserInteractionEnabled = true
+//            blur.isUserInteractionEnabled = true
             imagemPerfil.image = UIImage(named: usuario.avatar ?? "account-outline")
             email.text = usuario.email
             telefone.text = usuario.telefone
