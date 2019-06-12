@@ -12,8 +12,6 @@ class AvatarViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     let imagens = ["avatar01", "avatar02", "avatar03", "avatar04", "avatar05", "avatar06", "avatar07", "avatar08", "avatar10"]
     
-    var delegate: RegistroDelegate?
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imagens.count
     }
@@ -25,12 +23,11 @@ class AvatarViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let delegate = self.delegate {
-            delegate.trocaImg(value: imagens[indexPath.row])
-        }
+        RegistroViewController.avatar = imagens[indexPath.row]
         dismiss(animated: true, completion: nil)
     }
 
+    
     @IBOutlet weak var table: UICollectionView!
     
     override func viewDidLoad(){

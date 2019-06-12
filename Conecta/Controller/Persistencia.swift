@@ -105,9 +105,10 @@ extension UIViewController {
             }
         }
     }
-    func limpar(){
+    func limparUsuarios(){
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         if let context = appDelegate?.persistentContainer.viewContext{
+            sair()
             for usuario in todosUsuarios(){
                 context.delete(usuario)
             }

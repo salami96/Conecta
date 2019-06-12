@@ -333,6 +333,7 @@
                         <outletCollection property="fields" destination="rn0-Q1-bIp" collectionClass="NSMutableArray" id="8Rb-aH-z6A"/>
                         <outletCollection property="fields" destination="IFy-yh-NL1" collectionClass="NSMutableArray" id="6O6-VB-fxl"/>
                         <outletCollection property="fields" destination="FRf-AB-dAZ" collectionClass="NSMutableArray" id="YxY-go-2Qg"/>
+                        <segue destination="Shx-4o-GMy" kind="presentation" identifier="trocaAvatar" id="riB-ND-uFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqh-As-NSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
