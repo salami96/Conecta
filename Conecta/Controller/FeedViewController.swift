@@ -17,7 +17,6 @@ class FeedViewController: UIViewController {
     
     var candies = [Candy]()
     var filteredCandies = [Candy]()
-    var interesses = [Interesses]()
     var interessesFiltrados = [Interesses]()
     
     
@@ -78,6 +77,7 @@ class FeedViewController: UIViewController {
         ]
         //limparUsuarios()
         //criacaoDeUsuarios()
+        //criacaoInteresses()
     }
     
     func searchBarIsEmpty() -> Bool {
@@ -98,7 +98,7 @@ class FeedViewController: UIViewController {
         table.reloadData()
     }
     func filtrarConteudoPorTexto(_ texto: String, escopo: String = "Todos") {
-        var resultado = todosInteresses().filter({( interesse: Interesses) -> Bool in
+        interessesFiltrados = todosInteresses().filter({( interesse: Interesses) -> Bool in
             var aprender = false
             if escopo != "Todos" {
                 aprender = escopo == "Aprender"
@@ -132,8 +132,8 @@ extension FeedViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
-        //filtrarConteudoPorTexto(searchController.searchBar.text!, escopo: scope)
+        //filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+        filtrarConteudoPorTexto(searchController.searchBar.text!, escopo: scope)
     }
 }
 
@@ -180,28 +180,50 @@ extension FeedViewController: UITableViewDelegate{
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
-            return filteredCandies.count
+            return interessesFiltrados.count
         }
-        return candies.count
+        return todosInteresses().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FeedTableViewCell else { fatalError() }
-        let candy: Candy
+//        let candy: Candy
+//        if isFiltering() {
+//            candy = filteredCandies[indexPath.row]
+//        } else {
+//            candy = candies[indexPath.row]
+//        }
+//        cell.nome.text = candy.name
+//        cell.categoria.text = candy.category
+        var interesse: Interesses
         if isFiltering() {
-            candy = filteredCandies[indexPath.row]
+            interesse = interessesFiltrados[indexPath.row]
         } else {
-            candy = candies[indexPath.row]
+            interesse = todosInteresses()[indexPath.row]
         }
-        cell.nome.text = candy.name
-        cell.categoria.text = candy.category
         
+        
+        cell.nome.text = interesse.nomeAutor
+        if interesse.aprender {
+            cell.categoria.text = "Quer aprender: " + interesse.titulo!
+            cell.avaliacao.text = ""
+            cell.star.isHidden = true
+            cell.icone.image = UIImage(named: "aprender")
+        } else {
+            cell.categoria.text = "Quer ensinar: " + interesse.titulo!
+            cell.avaliacao.text = "\(interesse.avaliacao)"
+            cell.star.isHidden = false
+            cell.star.image = UIImage(named: interesse.avaliacao > 0 ? "estrelaAmarela" : "estrelaCinza")
+            cell.icone.image = UIImage(named: "ensinar")
+        }
+        cell.img.image = UIImage(named: pegarAvatar(id: interesse.idAutor))
+        cell.horarios.text = interesse.horaCadastro
         return cell
     }
 }
 
 extension FeedViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+        filtrarConteudoPorTexto(searchBar.text!, escopo: searchBar.scopeButtonTitles![selectedScope])
     }
 }

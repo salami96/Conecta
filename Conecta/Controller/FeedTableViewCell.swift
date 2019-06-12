@@ -13,10 +13,10 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var avaliacao: UILabel!
-    @IBOutlet weak var labelEstudante: UILabel!
-    @IBOutlet weak var labelMonitor: UILabel!
     @IBOutlet weak var categoria: UILabel!
     @IBOutlet weak var horarios: UILabel!
+    var star: UIImageView!
+    var icone: UIImageView!
     
     
     override func awakeFromNib() {
