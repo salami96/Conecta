@@ -19,7 +19,8 @@ class AprenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         data.locale = loc
-        
+        cancelarButton.layer.cornerRadius = 10
+        salvarButton.layer.cornerRadius = 10
     }
 
 }

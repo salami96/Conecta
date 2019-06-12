@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5zX-RU-PFg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="735"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="167" id="ncz-TY-gvE" customClass="FeedTableViewCell" customModule="Conecta" customModuleProvider="target">
@@ -117,12 +117,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-yh-o4t">
-                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2hT-yh-o4t">
+                                <rect key="frame" x="20" y="748" width="374" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEp-zn-ei8">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
                                         <color key="backgroundColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Slq-gJ-Yvd"/>
+                                            <constraint firstAttribute="width" constant="177" id="vjq-0G-zH1"/>
+                                        </constraints>
                                         <state key="normal" title="QUERO ENSINAR">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -131,8 +135,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEL-C7-Ke4">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                                        <rect key="frame" x="197" y="0.0" width="177" height="50"/>
                                         <color key="backgroundColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="IFZ-Nj-pb2"/>
+                                            <constraint firstAttribute="height" constant="50" id="PI1-Yn-mac"/>
+                                        </constraints>
                                         <state key="normal" title="QUERO APRENDER">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -141,27 +149,25 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="V1f-9F-cdd"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5zX-RU-PFg" firstAttribute="leading" secondItem="qlW-RQ-she" secondAttribute="leading" id="51q-C3-9rT"/>
-                            <constraint firstItem="2hT-yh-o4t" firstAttribute="trailing" secondItem="qlW-RQ-she" secondAttribute="trailing" id="BkE-u8-hOr"/>
                             <constraint firstItem="5zX-RU-PFg" firstAttribute="top" secondItem="qlW-RQ-she" secondAttribute="top" id="Mxp-6l-WHo"/>
                             <constraint firstItem="qlW-RQ-she" firstAttribute="trailing" secondItem="5zX-RU-PFg" secondAttribute="trailing" id="QAL-aC-OLG"/>
-                            <constraint firstItem="5zX-RU-PFg" firstAttribute="bottom" secondItem="qlW-RQ-she" secondAttribute="bottom" id="Th1-B0-6ZI"/>
-                            <constraint firstItem="2hT-yh-o4t" firstAttribute="leading" secondItem="qlW-RQ-she" secondAttribute="leading" id="aqJ-Dy-56g"/>
-                            <constraint firstItem="qlW-RQ-she" firstAttribute="bottom" secondItem="2hT-yh-o4t" secondAttribute="bottom" id="grE-aY-SXK"/>
+                            <constraint firstItem="5zX-RU-PFg" firstAttribute="bottom" secondItem="qlW-RQ-she" secondAttribute="bottom" constant="10" id="Th1-B0-6ZI"/>
+                            <constraint firstItem="qlW-RQ-she" firstAttribute="bottom" secondItem="2hT-yh-o4t" secondAttribute="bottom" constant="15" id="bAn-Tq-Oxc"/>
+                            <constraint firstItem="qlW-RQ-she" firstAttribute="trailing" secondItem="2hT-yh-o4t" secondAttribute="trailing" constant="20" id="buh-Xe-d03"/>
+                            <constraint firstItem="2hT-yh-o4t" firstAttribute="leading" secondItem="qlW-RQ-she" secondAttribute="leading" constant="20" id="rVw-UL-EvP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qlW-RQ-she"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Clw-we-zPN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="constraint" destination="V1f-9F-cdd" id="SjN-MA-7Yc"/>
+                        <outlet property="queroAprenderButton" destination="CEL-C7-Ke4" id="63u-Ah-Oh5"/>
+                        <outlet property="queroEnsinarButton" destination="vEp-zn-ei8" id="mFL-0l-Fvn"/>
                         <outlet property="table" destination="5zX-RU-PFg" id="haD-de-ySI"/>
                         <segue destination="ZmB-lh-ejQ" kind="show" identifier="Detalhe" id="Cmo-3F-JMf"/>
                     </connections>
@@ -178,24 +184,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-3G-W5e">
-                                <rect key="frame" x="0.0" y="763" width="207" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="O QUE EU ENSINO">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-b4-ZLu">
-                                <rect key="frame" x="207" y="763" width="207" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="O QUE EU APRENDO">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3z-Vh-PAM">
-                                <rect key="frame" x="20" y="101" width="374" height="654"/>
+                                <rect key="frame" x="20" y="101" width="374" height="646"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star-wars" translatesAutoresizingMaskIntoConstraints="NO" id="EAF-6Z-NFO">
@@ -315,8 +305,40 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KU3-p5-EC2">
+                                <rect key="frame" x="20" y="755" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-3G-W5e">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="1Xh-zF-EFj"/>
+                                            <constraint firstAttribute="height" constant="50" id="OIU-Wt-6aa"/>
+                                        </constraints>
+                                        <state key="normal" title="O QUE EU ENSINO">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-b4-ZLu">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="50"/>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="2FH-6M-yZe"/>
+                                            <constraint firstAttribute="height" constant="50" id="TsJ-yt-pYD"/>
+                                        </constraints>
+                                        <state key="normal" title="O QUE EU APRENDO">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="W52-a2-6w7" firstAttribute="trailing" secondItem="KU3-p5-EC2" secondAttribute="trailing" constant="20" id="1rB-Dh-qia"/>
+                            <constraint firstItem="KU3-p5-EC2" firstAttribute="leading" secondItem="W52-a2-6w7" secondAttribute="leading" constant="20" id="26t-RH-zBM"/>
+                            <constraint firstItem="W52-a2-6w7" firstAttribute="bottom" secondItem="KU3-p5-EC2" secondAttribute="bottom" constant="8" id="Ax5-dL-fQC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W52-a2-6w7"/>
                     </view>
                     <connections>
@@ -363,31 +385,31 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JgF-gF-Jrb">
-                                        <rect key="frame" x="27" y="137" width="320" height="263"/>
+                                        <rect key="frame" x="27" y="137" width="320" height="248"/>
                                         <date key="date" timeIntervalSinceReferenceDate="581519947.038908">
                                             <!--2019-06-06 13:19:07 +0000-->
                                         </date>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observações:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnZ-Gi-j7v">
-                                        <rect key="frame" x="20" y="422" width="334" height="20.5"/>
+                                        <rect key="frame" x="20" y="407" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Java API..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qAv-81-4ym">
-                                        <rect key="frame" x="2" y="464.5" width="370" height="123.5"/>
+                                        <rect key="frame" x="2" y="449.5" width="370" height="123.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gjo-hh-0kn">
-                                        <rect key="frame" x="0.0" y="610" width="374" height="35"/>
+                                        <rect key="frame" x="0.0" y="595" width="374" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-CR-MJE">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
                                                 <color key="backgroundColor" red="0.90980392156862744" green="0.52941176470588236" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="kcl-OL-rCT"/>
+                                                    <constraint firstAttribute="height" constant="50" id="kcl-OL-rCT"/>
                                                     <constraint firstAttribute="width" constant="177" id="qRl-hO-wmh"/>
                                                 </constraints>
                                                 <state key="normal" title="CANCELAR">
@@ -395,7 +417,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWo-rs-qgG">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="35"/>
+                                                <rect key="frame" x="197" y="0.0" width="177" height="50"/>
                                                 <color key="backgroundColor" red="0.52941176470588236" green="0.90980392156862744" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="SALVAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -482,39 +504,39 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nQO-bT-FZa">
-                                        <rect key="frame" x="27" y="134" width="320" height="272.5"/>
+                                        <rect key="frame" x="27" y="134" width="320" height="257.5"/>
                                         <date key="date" timeIntervalSinceReferenceDate="581519947.038908">
                                             <!--2019-06-06 13:19:07 +0000-->
                                         </date>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observações:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izW-Pl-qRN">
-                                        <rect key="frame" x="20" y="427.5" width="334" height="20.5"/>
+                                        <rect key="frame" x="20" y="412.5" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Java API..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IkO-f9-EWJ">
-                                        <rect key="frame" x="2" y="469" width="370" height="120"/>
+                                        <rect key="frame" x="2" y="454" width="370" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aln-C7-NFa">
-                                        <rect key="frame" x="0.0" y="610" width="374" height="35"/>
+                                        <rect key="frame" x="0.0" y="595" width="374" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFW-uz-9V7">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
                                                 <color key="backgroundColor" red="0.90980392160000001" green="0.52941176469999995" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="177" id="AMX-z9-abR"/>
-                                                    <constraint firstAttribute="height" constant="35" id="Uhe-6Q-Sc7"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Uhe-6Q-Sc7"/>
                                                 </constraints>
                                                 <state key="normal" title="CANCELAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arw-Ib-Emg">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="35"/>
+                                                <rect key="frame" x="197" y="0.0" width="177" height="50"/>
                                                 <color key="backgroundColor" red="0.52941176469999995" green="0.90980392160000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="SALVAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
