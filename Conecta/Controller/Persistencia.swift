@@ -93,6 +93,22 @@ extension UIViewController {
         }
         return nil
     }
+    public func bloquerarAcesso(view: UIView){
+        let blur = UIVisualEffectView()
+        let texto = UILabel()
+        let botao = UIButton()
+        if pegarUsuarioConectado() == nil {
+            texto.text = "Ooops... Você tem que entrar para aproveitar o máximo do Conecta!"
+            botao.backgroundColor = #colorLiteral(red: 0.4412248135, green: 0.9096048474, blue: 0.3292904794, alpha: 1)
+            botao.titleLabel?.text = "Entrar"
+            blur.isHidden = false
+            blur.isUserInteractionEnabled = true
+        } else {
+            blur.isHidden = true
+            blur.isUserInteractionEnabled = true
+        }
+        view.addSubview(blur)
+    }
     func pegarAvatar(id: Int16) -> String {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         var resultado = ""
