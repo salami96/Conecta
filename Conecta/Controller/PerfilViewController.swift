@@ -65,7 +65,7 @@ class PerfilViewController: UIViewController {
     
     @IBAction func sair(_ sender: UIBarButtonItem) {
         sair()
-        performSegue(withIdentifier: "entrar", sender: nil)
+        recarregaUsuario()
     }
     @IBAction func entrar(_ sender: UIButton) {
         performSegue(withIdentifier: "entrar", sender: nil)
