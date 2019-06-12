@@ -125,6 +125,10 @@ extension UIViewController {
             for usuario in todosUsuarios(){
                 context.delete(usuario)
             }
+            for interesse in todosInteresses(){
+                context.delete(interesse)
+            }
+
             do {
                 try context.save()
             } catch let error {
@@ -162,6 +166,7 @@ extension UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         if let context = appDelegate?.persistentContainer.viewContext{
             let request: NSFetchRequest  = Interesses.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor.init(key: "id", ascending: false)]
             do {
                 return try context.fetch(request)
             } catch let error {
@@ -199,6 +204,17 @@ extension UIViewController {
             }
         }
         return resultado
+    }
+    func horaAtual() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        let horaCadastro = "\(month)/\(day)/\(year) \(hour):\(minutes):00 AM"
+        return horaCadastro
     }
 //    func filtrarConteudoPorTexto(_ texto: String, escopo: String = "Todos") {
 //        var resultado = todosInteresses().filter({( interesse: Interesses) -> Bool in

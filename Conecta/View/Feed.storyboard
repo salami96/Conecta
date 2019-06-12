@@ -158,7 +158,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qlW-RQ-she"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Clw-we-zPN"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Clw-we-zPN">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="WFR-pb-Snr"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="constraint" destination="V1f-9F-cdd" id="SjN-MA-7Yc"/>
@@ -347,7 +349,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qN8-s2-jJa">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Java..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qN8-s2-jJa">
                                         <rect key="frame" x="20" y="42.5" width="334" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="laT-RU-17S"/>
@@ -368,7 +370,7 @@
                                             <!--2019-06-06 13:19:07 +0000-->
                                         </date>
                                     </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observações:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnZ-Gi-j7v">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnZ-Gi-j7v">
                                         <rect key="frame" x="20" y="422" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -393,6 +395,9 @@
                                                 <state key="normal" title="CANCELAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="limpar:" destination="Ttd-Qp-kak" eventType="touchUpInside" id="ao6-z5-Rt0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWo-rs-qgG">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="35"/>
@@ -400,6 +405,9 @@
                                                 <state key="normal" title="SALVAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="Salvar:" destination="Ttd-Qp-kak" eventType="touchUpInside" id="Ftk-ln-GBo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -442,7 +450,10 @@
                     <connections>
                         <outlet property="cancelarButton" destination="yJQ-CR-MJE" id="G6T-Bm-uRF"/>
                         <outlet property="data" destination="JgF-gF-Jrb" id="7n2-9p-mGW"/>
+                        <outlet property="descricao" destination="qAv-81-4ym" id="AXT-Sp-pjv"/>
                         <outlet property="salvarButton" destination="MWo-rs-qgG" id="JUu-h2-Dn9"/>
+                        <outlet property="titulo" destination="qN8-s2-jJa" id="UJ9-5n-jY4"/>
+                        <segue destination="T1f-fL-9eF" kind="presentation" identifier="entrar" id="CXW-wS-bpm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD5-Ev-2Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -487,7 +498,7 @@
                                             <!--2019-06-06 13:19:07 +0000-->
                                         </date>
                                     </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observações:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izW-Pl-qRN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izW-Pl-qRN">
                                         <rect key="frame" x="20" y="427.5" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -512,6 +523,9 @@
                                                 <state key="normal" title="CANCELAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="limpar:" destination="ad5-FR-Fcl" eventType="touchUpInside" id="GYi-1X-qPd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arw-Ib-Emg">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="35"/>
@@ -519,6 +533,9 @@
                                                 <state key="normal" title="SALVAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="Salvar:" destination="ad5-FR-Fcl" eventType="touchUpInside" id="0EN-yr-VvZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -562,12 +579,23 @@
                     <connections>
                         <outlet property="cancelarButton" destination="tFW-uz-9V7" id="vc3-Mp-0tU"/>
                         <outlet property="data" destination="nQO-bT-FZa" id="dcJ-L4-eYr"/>
+                        <outlet property="descricao" destination="IkO-f9-EWJ" id="kqL-Hk-5Ku"/>
                         <outlet property="salvarButton" destination="arw-Ib-Emg" id="6J8-cQ-hYU"/>
+                        <outlet property="titulo" destination="Q2L-V7-jFB" id="mt5-Qk-AdO"/>
+                        <segue destination="T1f-fL-9eF" kind="presentation" identifier="entrar" id="48f-lW-Zlg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEh-Xm-QAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1194" y="852"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="xlC-0E-V9j">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="T1f-fL-9eF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8X-sg-CUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="1329"/>
         </scene>
         <!--Feed-->
         <scene sceneID="iG0-u0-caS">
@@ -600,4 +628,7 @@
         <image name="feed" width="24" height="24"/>
         <image name="star-wars" width="1200" height="400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="48f-lW-Zlg"/>
+    </inferredMetricsTieBreakers>
 </document>
