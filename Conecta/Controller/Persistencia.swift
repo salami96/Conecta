@@ -93,6 +93,19 @@ extension UIViewController {
         }
         return nil
     }
+    func pegarAvatar(id: Int16) -> String {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        var resultado = ""
+        if (appDelegate?.persistentContainer.viewContext) != nil{
+            let usuarios = todosUsuarios()
+            for usuario in usuarios {
+                if usuario.id == id {
+                    resultado = usuario.avatar ?? ""
+                }
+            }
+        }
+        return resultado
+    }
     func sair(){
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         if let context = appDelegate?.persistentContainer.viewContext{
