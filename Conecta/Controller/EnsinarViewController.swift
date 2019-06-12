@@ -11,6 +11,10 @@ import UIKit
 class EnsinarViewController: UIViewController {
 
     @IBOutlet weak var data: UIDatePicker!
+    
+    @IBOutlet weak var cancelarButton: UIButton!
+    @IBOutlet weak var salvarButton: UIButton!
+    
     let loc = Locale(identifier: "pt-br")
     override func viewDidLoad() {
         super.viewDidLoad()
