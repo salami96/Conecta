@@ -8,10 +8,25 @@
 
 import UIKit
 
+extension UIView {
+    var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+        while parentResponder != nil {
+            parentResponder = parentResponder!.next
+            if let viewController = parentResponder as? UIViewController {
+                return viewController
+            }
+        }
+        return nil
+    }
+}
+
 class Blur: UIView {
     
     let kCONTENT_XIB_NAME = "blur"
     @IBOutlet var contentView: UIView!
+    
+    var onClick: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +44,9 @@ class Blur: UIView {
     }
 
     @IBAction func entrar(_ sender: UIButton) {
-        
+//        self.superclass
+//        if let viewController = parentViewController as?
+        onClick?()
     }
     /*
     // Only override draw() if you perform custom drawing.

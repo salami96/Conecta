@@ -215,7 +215,7 @@ extension FeedViewController: UITableViewDataSource {
             cell.avaliacao.text = "\(interesse.avaliacao)"
             cell.star.isHidden = false
             cell.star.image = UIImage(named: interesse.avaliacao > 0 ? "EstrelaAmarela" : "Estrelacinza")
-            cell.avaliacao.textColor = interesse.avaliacao > 0 ? #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.avaliacao.textColor = interesse.avaliacao > 0 ? #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1) : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             cell.icon.image = UIImage(named: "Professor")
             cell.linha.backgroundColor = #colorLiteral(red: 0.3529411765, green: 0.7843137255, blue: 0.9803921569, alpha: 1)
         }
