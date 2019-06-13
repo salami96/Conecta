@@ -103,9 +103,6 @@ class PerfilViewController: UIViewController {
         sair()
         recarregaUsuario()
     }
-    @IBAction func entrar(_ sender: UIButton) {
-        performSegue(withIdentifier: "entrar", sender: nil)
-    }
     func presentLogin(){
         performSegue(withIdentifier: "entrar", sender: nil)
     }

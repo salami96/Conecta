@@ -205,6 +205,18 @@ extension UIViewController {
         }
         return resultado
     }
+    func removerInteresse(interesse: Interesses){
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = appDelegate?.persistentContainer.viewContext{
+            context.delete(interesse)
+            do {
+                try context.save()
+            } catch let error {
+                print("Ocorreu um erro \(error)")
+            }
+        }
+
+    }
     func horaAtual() -> String {
         let date = Date()
         let calendar = Calendar.current
