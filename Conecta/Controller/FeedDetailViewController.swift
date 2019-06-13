@@ -17,7 +17,6 @@ class FeedDetailViewController: UIViewController {
     
     @IBOutlet weak var bioView: UIView!
     @IBOutlet weak var imagemPerfil: UIImageView!
-//    @IBOutlet weak var navigation: UINavigationItem!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var telefone: UILabel!
@@ -53,23 +52,22 @@ class FeedDetailViewController: UIViewController {
         ratingView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         ratingView.layer.shadowRadius = 12.0
         ratingView.layer.shadowOpacity = 0.1
-        
-//        editBioButton.layer.cornerRadius = 5
-//        editContatoButton.layer.cornerRadius = 5
-        
-//        blurReference = Blur(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height))
-//        blurReference.onClick = presentLogin
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        carregaUsuario()
     }
-    */
-
+    
+    public func carregaUsuario(){
+        
+        imagemPerfil.image = UIImage(named: usuario.avatar ?? "account-outline")
+        email.text = usuario.email
+        telefone.text = usuario.telefone
+        nome.text = usuario.nome! + " " + usuario.sobrenome!
+        let resto = usuario.id % 2 == 0
+        capa.image = UIImage(named: resto ? "papel10" : "papel40")
+        capa.layer.cornerRadius = 5
+        
+        ratingView.isHidden = interessesPorAutorEAprender(id: usuario.id, aprender: false) == []
+    }
 }
