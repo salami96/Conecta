@@ -27,6 +27,9 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var editBioButton: UIButton!
     @IBOutlet weak var editContatoButton: UIButton!
     
+    @IBOutlet weak var oQueAprendoButton: UIButton!
+    @IBOutlet weak var oQueEnsinoButton: UIButton!
+    
     var usuario = UsuarioConectado()
     var blurReference = Blur()
     
@@ -73,6 +76,10 @@ class PerfilViewController: UIViewController {
         
         blurReference = Blur(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height))
         blurReference.onClick = presentLogin
+        
+        
+        oQueEnsinoButton.layer.cornerRadius = 10
+        oQueAprendoButton.layer.cornerRadius = 10
     }
 
     public func recarregaUsuario(){
