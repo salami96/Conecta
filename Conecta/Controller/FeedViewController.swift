@@ -11,14 +11,11 @@ import UIKit
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
-    @IBOutlet weak var constraint: NSLayoutConstraint!
     
     @IBOutlet weak var queroEnsinarButton: UIButton!
     @IBOutlet weak var queroAprenderButton: UIButton!
     
     
-    var candies = [Candy]()
-    var filteredCandies = [Candy]()
     var interessesFiltrados = [Interesses]()
     
     
@@ -63,23 +60,6 @@ class FeedViewController: UIViewController {
         table.delegate = self
         searchController.searchBar.scopeButtonTitles = ["Todos", "Ensinar", "Aprender"]
         searchController.searchBar.delegate = self
-        candies = [
-            Candy(category:"Chocolate", name:"Chocolate Bar"),
-            Candy(category:"Chocolate", name:"Chocolate Chip"),
-            Candy(category:"Chocolate", name:"Dark Chocolate"),
-            Candy(category:"Hard", name:"Lollipop"),
-            Candy(category:"Hard", name:"Candy Cane"),
-            Candy(category:"Hard", name:"Jaw Breaker"),
-            Candy(category:"Other", name:"Caramel"),
-            Candy(category:"Other", name:"Sour Chew"),
-            Candy(category:"Other", name:"Gummi Bear"),
-            Candy(category:"Other", name:"Candy Floss"),
-            Candy(category:"Chocolate", name:"Chocolate Coin"),
-            Candy(category:"Chocolate", name:"Chocolate Egg"),
-            Candy(category:"Other", name:"Jelly Beans"),
-            Candy(category:"Other", name:"Liquorice"),
-            Candy(category:"Hard", name:"Toffee Apple")
-        ]
         //limparUsuarios()
         //criacaoDeUsuarios()
         //criacaoInteresses()
@@ -90,18 +70,6 @@ class FeedViewController: UIViewController {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        filteredCandies = candies.filter({( candy : Candy) -> Bool in
-            let doesCategoryMatch = (scope == "All") || (candy.category == scope)
-            
-            if searchBarIsEmpty() {
-                return doesCategoryMatch
-            } else {
-                return doesCategoryMatch && candy.name.lowercased().contains(searchText.lowercased())
-            }
-        })
-        table.reloadData()
-    }
     func filtrarConteudoPorTexto(_ texto: String, escopo: String = "Todos") {
         interessesFiltrados = todosInteresses().filter({( interesse: Interesses) -> Bool in
             var aprender = false
@@ -127,11 +95,6 @@ class FeedViewController: UIViewController {
 }
 
 
-struct Candy{
-    let category: String
-    let name: String
-}
-
 extension FeedViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
@@ -146,8 +109,25 @@ extension FeedViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextScreenVC = segue.destination as? FeedDetailViewController, let data = sender as? Usuarios {
+            nextScreenVC.usuario = data
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Detalhe", sender: nil)
+        var dados = Usuarios()
+        for usuario in todosUsuarios(){
+            if isFiltering() {
+                if usuario.id == interessesFiltrados[indexPath.row].idAutor {
+                    dados = usuario
+                }
+            } else {
+                if usuario.id == todosInteresses()[indexPath.row].idAutor {
+                    dados = usuario
+                }
+            }
+        }
+        performSegue(withIdentifier: "Detalhe", sender: dados)
     }
 //    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 //        if(velocity.y>0) {

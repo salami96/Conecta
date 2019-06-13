@@ -595,6 +595,9 @@
                                                 <state key="normal" title="CANCELAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="limpar:" destination="Ttd-Qp-kak" eventType="touchUpInside" id="qFf-Ob-Ha5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWo-rs-qgG">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="50"/>
@@ -602,6 +605,9 @@
                                                 <state key="normal" title="SALVAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="Salvar:" destination="Ttd-Qp-kak" eventType="touchUpInside" id="5A3-Rz-x4o"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -644,7 +650,9 @@
                     <connections>
                         <outlet property="cancelarButton" destination="yJQ-CR-MJE" id="G6T-Bm-uRF"/>
                         <outlet property="data" destination="JgF-gF-Jrb" id="7n2-9p-mGW"/>
+                        <outlet property="descricao" destination="qAv-81-4ym" id="dem-H6-zsI"/>
                         <outlet property="salvarButton" destination="MWo-rs-qgG" id="JUu-h2-Dn9"/>
+                        <outlet property="titulo" destination="qN8-s2-jJa" id="wdB-gv-EzN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD5-Ev-2Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -714,6 +722,9 @@
                                                 <state key="normal" title="CANCELAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="limpar:" destination="ad5-FR-Fcl" eventType="touchUpInside" id="FOA-38-9lk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arw-Ib-Emg">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="50"/>
@@ -721,6 +732,9 @@
                                                 <state key="normal" title="SALVAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="Salvar:" destination="ad5-FR-Fcl" eventType="touchUpInside" id="Iok-zU-5KG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -764,7 +778,9 @@
                     <connections>
                         <outlet property="cancelarButton" destination="tFW-uz-9V7" id="vc3-Mp-0tU"/>
                         <outlet property="data" destination="nQO-bT-FZa" id="dcJ-L4-eYr"/>
+                        <outlet property="descricao" destination="IkO-f9-EWJ" id="boz-Xf-Ci0"/>
                         <outlet property="salvarButton" destination="arw-Ib-Emg" id="6J8-cQ-hYU"/>
+                        <outlet property="titulo" destination="Q2L-V7-jFB" id="A9R-ZD-mPQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEh-Xm-QAj" userLabel="First Responder" sceneMemberID="firstResponder"/>

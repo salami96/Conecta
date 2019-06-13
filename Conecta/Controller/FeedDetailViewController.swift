@@ -10,7 +10,7 @@ import UIKit
 
 class FeedDetailViewController: UIViewController {
 
-
+    var usuario = Usuarios()
     @IBOutlet weak var topBannerView: UIView!
     @IBOutlet weak var contatoView: UIView!
     @IBOutlet weak var ratingView: UIView!
