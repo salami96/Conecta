@@ -23,6 +23,8 @@ extension UIView {
 
 class Blur: UIView {
     
+    @IBOutlet weak var botao: UIButton!
+    
     let kCONTENT_XIB_NAME = "blur"
     @IBOutlet var contentView: UIView!
     
@@ -41,6 +43,7 @@ class Blur: UIView {
     func commonInit() {
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         contentView.fixInView(self)
+        botao.layer.cornerRadius = 10
     }
 
     @IBAction func entrar(_ sender: UIButton) {

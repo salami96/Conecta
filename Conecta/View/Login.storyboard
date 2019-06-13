@@ -299,6 +299,9 @@
                                                 <state key="normal" title="Cancelar">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="cancelar:" destination="tTf-1H-PF2" eventType="touchUpInside" id="0Wu-Ms-5ap"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wz-W3-w2n">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="50"/>
@@ -346,6 +349,7 @@
                         <outletCollection property="fields" destination="rn0-Q1-bIp" collectionClass="NSMutableArray" id="8Rb-aH-z6A"/>
                         <outletCollection property="fields" destination="IFy-yh-NL1" collectionClass="NSMutableArray" id="6O6-VB-fxl"/>
                         <outletCollection property="fields" destination="FRf-AB-dAZ" collectionClass="NSMutableArray" id="YxY-go-2Qg"/>
+                        <outletCollection property="fields" destination="icD-vy-GpW" collectionClass="NSMutableArray" id="jGK-xs-VQl"/>
                         <segue destination="Shx-4o-GMy" kind="presentation" identifier="trocaAvatar" id="riB-ND-uFy"/>
                     </connections>
                 </viewController>
