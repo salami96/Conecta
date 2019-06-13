@@ -36,6 +36,8 @@ class EnsinarViewController: UIViewController {
         data.locale = loc
         blurReference = Blur(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height))
         blurReference.onClick = presentLogin
+        cancelarButton.layer.cornerRadius = 10
+        salvarButton.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     

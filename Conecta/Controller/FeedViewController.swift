@@ -13,6 +13,8 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var constraint: NSLayoutConstraint!
     
+    @IBOutlet weak var queroEnsinarButton: UIButton!
+    @IBOutlet weak var queroAprenderButton: UIButton!
     
     
     var candies = [Candy]()
@@ -48,6 +50,9 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup the Search Controller
+        queroEnsinarButton.layer.cornerRadius = 10
+        queroAprenderButton.layer.cornerRadius = 10
+        
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "O que quer aprender ou ensinar?"
