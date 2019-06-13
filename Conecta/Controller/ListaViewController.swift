@@ -25,20 +25,7 @@ class ListaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.detailTextLabel?.text = interesse.horaCadastro
         
         return cell
-    }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            removerInteresse(interesse: interesses[indexPath.row])
-            interesses = interessesPorAutorEAprender(id: usuario.id, aprender: aprender)
-            tableView.reloadData()
-        }
-    }
-    
-    
+    }    
     @IBOutlet weak var table: UITableView!
     override func viewWillAppear(_ animated: Bool) {
         usuario = data!.0

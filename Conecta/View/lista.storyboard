@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="MyK-UX-ddi" detailTextLabel="RPD-Aa-O1Z" style="IBUITableViewCellStyleSubtitle" id="eXG-ip-Yul">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="MyK-UX-ddi" detailTextLabel="RPD-Aa-O1Z" style="IBUITableViewCellStyleSubtitle" id="eXG-ip-Yul">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eXG-ip-Yul" id="bxc-PO-Sca">

@@ -79,4 +79,11 @@ class FeedDetailViewController: UIViewController {
     func listar(usuario: Usuarios,aprender: Bool){
         performSegue(withIdentifier: "lista", sender: (usuario, aprender))
     }
+    @IBAction func ensinando(_ sender: UIButton) {
+        listar(usuario: usuario, aprender: false)
+    }
+    
+    @IBAction func aprendendo(_ sender: UIButton) {
+        listar(usuario: usuario, aprender: true)
+    }
 }
