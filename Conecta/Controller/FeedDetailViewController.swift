@@ -70,4 +70,13 @@ class FeedDetailViewController: UIViewController {
         
         ratingView.isHidden = interessesPorAutorEAprender(id: usuario.id, aprender: false) == []
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextScreenVC = segue.destination as? ListaViewController, let data = sender as? (Usuarios, Bool) {
+            nextScreenVC.data = data
+        }
+    }
+    func listar(usuario: Usuarios,aprender: Bool){
+        performSegue(withIdentifier: "lista", sender: (usuario, aprender))
+    }
 }

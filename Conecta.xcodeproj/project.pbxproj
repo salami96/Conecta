@@ -17,6 +17,8 @@
 		C054710422B15551003DB801 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710322B15551003DB801 /* Blur.swift */; };
 		C054710622B27CA7003DB801 /* ListaEnsinarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710522B27CA7003DB801 /* ListaEnsinarViewController.swift */; };
 		C054710822B27CF2003DB801 /* ListaAprenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710722B27CF2003DB801 /* ListaAprenderViewController.swift */; };
+		C054710A22B28A15003DB801 /* lista.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C054710922B28A15003DB801 /* lista.storyboard */; };
+		C054710C22B28A74003DB801 /* ListaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710B22B28A74003DB801 /* ListaViewController.swift */; };
 		C061871B22A14778002A47DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871A22A14778002A47DE /* AppDelegate.swift */; };
 		C061871D22A14778002A47DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871C22A14778002A47DE /* LoginViewController.swift */; };
 		C061872322A14778002A47DE /* Conecta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C061872122A14778002A47DE /* Conecta.xcdatamodeld */; };
@@ -47,6 +49,8 @@
 		C054710322B15551003DB801 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		C054710522B27CA7003DB801 /* ListaEnsinarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEnsinarViewController.swift; sourceTree = "<group>"; };
 		C054710722B27CF2003DB801 /* ListaAprenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAprenderViewController.swift; sourceTree = "<group>"; };
+		C054710922B28A15003DB801 /* lista.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = lista.storyboard; sourceTree = "<group>"; };
+		C054710B22B28A74003DB801 /* ListaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaViewController.swift; sourceTree = "<group>"; };
 		C061871722A14778002A47DE /* Conecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C061871A22A14778002A47DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C061871C22A14778002A47DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				C061873722A157D4002A47DE /* Feed.storyboard */,
 				C061873B22A158E2002A47DE /* Perfil.storyboard */,
 				C054710122B15287003DB801 /* blur.xib */,
+				C054710922B28A15003DB801 /* lista.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				C054710322B15551003DB801 /* Blur.swift */,
 				C054710522B27CA7003DB801 /* ListaEnsinarViewController.swift */,
 				C054710722B27CF2003DB801 /* ListaAprenderViewController.swift */,
+				C054710B22B28A74003DB801 /* ListaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C054710A22B28A15003DB801 /* lista.storyboard in Resources */,
 				C061873822A157D4002A47DE /* Feed.storyboard in Resources */,
 				C061873E22A15BDE002A47DE /* GoogleService-Info.plist in Resources */,
 				C061873622A15729002A47DE /* Login.storyboard in Resources */,
@@ -326,6 +333,7 @@
 				1509804422AABFEF00B6019D /* FeedDetailViewController.swift in Sources */,
 				C061871D22A14778002A47DE /* LoginViewController.swift in Sources */,
 				C061874E22A7ED99002A47DE /* FeedViewController.swift in Sources */,
+				C054710C22B28A74003DB801 /* ListaViewController.swift in Sources */,
 				C054710622B27CA7003DB801 /* ListaEnsinarViewController.swift in Sources */,
 				EB08F04522A95696002FBB1C /* AprenderViewController.swift in Sources */,
 				C054710022AFE8B7003DB801 /* AvatarCollectionViewCell.swift in Sources */,
