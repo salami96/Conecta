@@ -59,34 +59,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-4a-AEg">
-                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpH-Pg-ofx">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                        <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="O QUE EU APRENDO">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="03U-Sa-FQX" kind="show" id="7G3-Uk-Y3U"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htA-WW-DAF">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
-                                        <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="O QUE EU ENSINO">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="PIg-MJ-dop" kind="show" id="kop-Rq-cf6"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Jyv-SO-MX9"/>
-                                </constraints>
-                            </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6B-j0-HXG">
                                 <rect key="frame" x="20" y="465" width="374" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -364,12 +336,44 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-4a-AEg">
+                                <rect key="frame" x="20" y="747" width="374" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpH-Pg-ofx">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="Gnl-iY-Gcn"/>
+                                            <constraint firstAttribute="height" constant="50" id="rvl-8H-zeJ"/>
+                                        </constraints>
+                                        <state key="normal" title="O QUE EU APRENDO">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="03U-Sa-FQX" kind="show" id="7G3-Uk-Y3U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htA-WW-DAF">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="50"/>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="BWG-Zg-yc7"/>
+                                            <constraint firstAttribute="height" constant="50" id="ldG-g4-kev"/>
+                                        </constraints>
+                                        <state key="normal" title="O QUE EU ENSINO">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="PIg-MJ-dop" kind="show" id="kop-Rq-cf6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1m0-Jc-CVj" firstAttribute="trailing" secondItem="dhu-4a-AEg" secondAttribute="trailing" id="84f-wr-zuB"/>
-                            <constraint firstItem="1m0-Jc-CVj" firstAttribute="bottom" secondItem="dhu-4a-AEg" secondAttribute="bottom" id="Zgq-Yq-I1H"/>
-                            <constraint firstItem="dhu-4a-AEg" firstAttribute="leading" secondItem="1m0-Jc-CVj" secondAttribute="leading" id="tb6-SG-Vvk"/>
+                            <constraint firstItem="1m0-Jc-CVj" firstAttribute="bottom" secondItem="YpH-Pg-ofx" secondAttribute="bottom" constant="8" id="pSq-UV-PFt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1m0-Jc-CVj"/>
                     </view>
@@ -392,6 +396,8 @@
                         <outlet property="imagemPerfil" destination="cFt-3h-Hw8" id="zO3-r0-Q9T"/>
                         <outlet property="navigation" destination="G8V-4i-svV" id="Ueg-Sd-bJd"/>
                         <outlet property="nome" destination="HJ5-h7-fZQ" id="RDp-pg-pLE"/>
+                        <outlet property="oQueAprendoButton" destination="YpH-Pg-ofx" id="OuN-Yq-BDF"/>
+                        <outlet property="oQueEnsinoButton" destination="htA-WW-DAF" id="CRa-wT-k41"/>
                         <outlet property="ratingView" destination="25Y-eg-bfb" id="7Xm-ew-kF4"/>
                         <outlet property="telefone" destination="Lpa-ZU-kV5" id="31T-OV-FE6"/>
                         <outlet property="topBannerView" destination="kZR-IS-naq" id="6Sz-Ut-JDS"/>
