@@ -18,6 +18,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var linha: UIView!
     @IBOutlet weak var star: UIImageView!
     @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var frontView: UIView!
     
     
     
@@ -32,4 +34,14 @@ class FeedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension UIView {
+    
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
 }

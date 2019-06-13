@@ -206,6 +206,13 @@ extension FeedViewController: UITableViewDataSource {
         }
         cell.img.image = UIImage(named: pegarAvatar(id: interesse.idAutor))
         cell.horarios.text = interesse.horaCadastro
+        
+        DispatchQueue.main.async {
+            cell.backView.layer.cornerRadius = 10.0;
+            cell.frontView.roundCorners([.topRight, .bottomRight], radius: 10)
+        }
+        
+        cell.roundCorners([.topRight, .bottomRight], radius: 10)
         return cell
     }
 }
