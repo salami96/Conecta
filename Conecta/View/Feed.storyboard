@@ -655,6 +655,7 @@
                         <outlet property="descricao" destination="qAv-81-4ym" id="dem-H6-zsI"/>
                         <outlet property="salvarButton" destination="MWo-rs-qgG" id="JUu-h2-Dn9"/>
                         <outlet property="titulo" destination="qN8-s2-jJa" id="wdB-gv-EzN"/>
+                        <segue destination="uJe-b6-1zA" kind="presentation" identifier="entrar" id="Enb-6G-SWc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD5-Ev-2Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -783,11 +784,20 @@
                         <outlet property="descricao" destination="IkO-f9-EWJ" id="boz-Xf-Ci0"/>
                         <outlet property="salvarButton" destination="arw-Ib-Emg" id="6J8-cQ-hYU"/>
                         <outlet property="titulo" destination="Q2L-V7-jFB" id="A9R-ZD-mPQ"/>
+                        <segue destination="uJe-b6-1zA" kind="presentation" identifier="entrar" id="aef-Kg-d6e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEh-Xm-QAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="852"/>
+            <point key="canvasLocation" x="1217" y="852"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="6tc-2c-SUk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="uJe-b6-1zA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esx-VH-Pks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="1272"/>
         </scene>
         <!--Feed-->
         <scene sceneID="iG0-u0-caS">
@@ -827,4 +837,7 @@
         <image name="icons8-worldwide_location" width="96" height="96"/>
         <image name="star-wars" width="1200" height="400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aef-Kg-d6e"/>
+    </inferredMetricsTieBreakers>
 </document>
