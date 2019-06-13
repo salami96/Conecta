@@ -22,6 +22,9 @@ class FeedDetailViewController: UIViewController {
     @IBOutlet weak var telefone: UILabel!
     @IBOutlet weak var capa: UIImageView!
     
+    @IBOutlet weak var botaoEnsino: UIButton!
+    @IBOutlet weak var botaoAprendo: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +55,10 @@ class FeedDetailViewController: UIViewController {
         ratingView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         ratingView.layer.shadowRadius = 12.0
         ratingView.layer.shadowOpacity = 0.1
+        
+        botaoEnsino.layer.cornerRadius = 10
+        botaoAprendo.layer.cornerRadius = 10
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
