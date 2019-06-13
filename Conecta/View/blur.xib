@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Blur" customModule="Conecta" customModuleProvider="target">
             <connections>
+                <outlet property="botao" destination="l9f-P2-CeO" id="GHQ-a7-hCq"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Pos-B2-hUM"/>
             </connections>
         </placeholder>

@@ -15,6 +15,10 @@
 		C054710022AFE8B7003DB801 /* AvatarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05470FF22AFE8B7003DB801 /* AvatarCollectionViewCell.swift */; };
 		C054710222B15287003DB801 /* blur.xib in Resources */ = {isa = PBXBuildFile; fileRef = C054710122B15287003DB801 /* blur.xib */; };
 		C054710422B15551003DB801 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710322B15551003DB801 /* Blur.swift */; };
+		C054710622B27CA7003DB801 /* ListaEnsinarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710522B27CA7003DB801 /* ListaEnsinarViewController.swift */; };
+		C054710822B27CF2003DB801 /* ListaAprenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710722B27CF2003DB801 /* ListaAprenderViewController.swift */; };
+		C054710A22B28A15003DB801 /* lista.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C054710922B28A15003DB801 /* lista.storyboard */; };
+		C054710C22B28A74003DB801 /* ListaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054710B22B28A74003DB801 /* ListaViewController.swift */; };
 		C061871B22A14778002A47DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871A22A14778002A47DE /* AppDelegate.swift */; };
 		C061871D22A14778002A47DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061871C22A14778002A47DE /* LoginViewController.swift */; };
 		C061872322A14778002A47DE /* Conecta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C061872122A14778002A47DE /* Conecta.xcdatamodeld */; };
@@ -27,7 +31,6 @@
 		C061873E22A15BDE002A47DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C061873D22A15BDE002A47DE /* GoogleService-Info.plist */; };
 		C061874E22A7ED99002A47DE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061874D22A7ED99002A47DE /* FeedViewController.swift */; };
 		C061875022A7F249002A47DE /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061874F22A7F249002A47DE /* FeedTableViewCell.swift */; };
-		C061875422A7FB5F002A47DE /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061875322A7FB5F002A47DE /* SearchController.swift */; };
 		C061875622A82CD4002A47DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C061875522A82CD4002A47DE /* Main.storyboard */; };
 		C061875822A82E58002A47DE /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061875722A82E58002A47DE /* PerfilViewController.swift */; };
 		EB08F04322A9567B002FBB1C /* EnsinarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08F04222A9567B002FBB1C /* EnsinarViewController.swift */; };
@@ -44,6 +47,10 @@
 		C05470FF22AFE8B7003DB801 /* AvatarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionViewCell.swift; sourceTree = "<group>"; };
 		C054710122B15287003DB801 /* blur.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = blur.xib; sourceTree = "<group>"; };
 		C054710322B15551003DB801 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		C054710522B27CA7003DB801 /* ListaEnsinarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEnsinarViewController.swift; sourceTree = "<group>"; };
+		C054710722B27CF2003DB801 /* ListaAprenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAprenderViewController.swift; sourceTree = "<group>"; };
+		C054710922B28A15003DB801 /* lista.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = lista.storyboard; sourceTree = "<group>"; };
+		C054710B22B28A74003DB801 /* ListaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaViewController.swift; sourceTree = "<group>"; };
 		C061871722A14778002A47DE /* Conecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C061871A22A14778002A47DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C061871C22A14778002A47DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +65,6 @@
 		C061873D22A15BDE002A47DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C061874D22A7ED99002A47DE /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		C061874F22A7F249002A47DE /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
-		C061875322A7FB5F002A47DE /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		C061875522A82CD4002A47DE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C061875722A82E58002A47DE /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		C061875A22A83248002A47DE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 				C061873722A157D4002A47DE /* Feed.storyboard */,
 				C061873B22A158E2002A47DE /* Perfil.storyboard */,
 				C054710122B15287003DB801 /* blur.xib */,
+				C054710922B28A15003DB801 /* lista.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,7 +161,6 @@
 				C061873322A14B9B002A47DE /* Persistencia.swift */,
 				C061874D22A7ED99002A47DE /* FeedViewController.swift */,
 				C061874F22A7F249002A47DE /* FeedTableViewCell.swift */,
-				C061875322A7FB5F002A47DE /* SearchController.swift */,
 				C061875722A82E58002A47DE /* PerfilViewController.swift */,
 				EB08F04222A9567B002FBB1C /* EnsinarViewController.swift */,
 				EB08F04422A95696002FBB1C /* AprenderViewController.swift */,
@@ -164,6 +170,9 @@
 				C05470FD22AFD6E5003DB801 /* AvatarViewController.swift */,
 				C05470FF22AFE8B7003DB801 /* AvatarCollectionViewCell.swift */,
 				C054710322B15551003DB801 /* Blur.swift */,
+				C054710522B27CA7003DB801 /* ListaEnsinarViewController.swift */,
+				C054710722B27CF2003DB801 /* ListaAprenderViewController.swift */,
+				C054710B22B28A74003DB801 /* ListaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C054710A22B28A15003DB801 /* lista.storyboard in Resources */,
 				C061873822A157D4002A47DE /* Feed.storyboard in Resources */,
 				C061873E22A15BDE002A47DE /* GoogleService-Info.plist in Resources */,
 				C061873622A15729002A47DE /* Login.storyboard in Resources */,
@@ -322,10 +332,12 @@
 				C05470FC22AA93C0003DB801 /* Validacao.swift in Sources */,
 				1509804422AABFEF00B6019D /* FeedDetailViewController.swift in Sources */,
 				C061871D22A14778002A47DE /* LoginViewController.swift in Sources */,
-				C061875422A7FB5F002A47DE /* SearchController.swift in Sources */,
 				C061874E22A7ED99002A47DE /* FeedViewController.swift in Sources */,
+				C054710C22B28A74003DB801 /* ListaViewController.swift in Sources */,
+				C054710622B27CA7003DB801 /* ListaEnsinarViewController.swift in Sources */,
 				EB08F04522A95696002FBB1C /* AprenderViewController.swift in Sources */,
 				C054710022AFE8B7003DB801 /* AvatarCollectionViewCell.swift in Sources */,
+				C054710822B27CF2003DB801 /* ListaAprenderViewController.swift in Sources */,
 				C061871B22A14778002A47DE /* AppDelegate.swift in Sources */,
 				C054710422B15551003DB801 /* Blur.swift in Sources */,
 				C061875822A82E58002A47DE /* PerfilViewController.swift in Sources */,
