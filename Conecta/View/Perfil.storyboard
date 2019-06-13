@@ -374,6 +374,7 @@
                         <viewLayoutGuide key="safeArea" id="1m0-Jc-CVj"/>
                     </view>
                     <navigationItem key="navigationItem" id="G8V-4i-svV">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="Ur9-wK-5Lv"/>
                         <barButtonItem key="rightBarButtonItem" title="Sair" id="uWh-dV-ddr">
                             <connections>
                                 <action selector="sair:" destination="oes-fc-HTv" id="ANd-zO-OGK"/>

@@ -163,7 +163,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qlW-RQ-she"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Clw-we-zPN"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Clw-we-zPN">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="diB-IM-XyV"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="queroAprenderButton" destination="CEL-C7-Ke4" id="63u-Ah-Oh5"/>
