@@ -34,7 +34,7 @@ class FeedViewController: UIViewController {
     func criacaoInteresses() {
         criarInteresse(titulo: "Java", aprender: false, descricao: "Programação orientada à objeto, encapsulamento, herança, polimorfismo", horaCadastro: "5/28/2019 2:23:15 PM", idAutor: 1, nomeAutor: "Clark Andrews", avaliacao: 0, horarios: "6/28/2019 8:30:15 AM")
         criarInteresse(titulo: "Química Orgânica", aprender: true, descricao: "Cadeias carbônicas, ressonância e anéis aromáticos", horaCadastro: "5/16/2019 10:23:15 PM", idAutor: 6, nomeAutor: "Jessica Oliveira", avaliacao: 0, horarios: "6/15/2019 11:00:15 AM")
-        criarInteresse(titulo: "Aulas de violão", aprender: false, descricao: "Aulas para iniciantes", horaCadastro: "4/10/2019 7:35:15 PM", idAutor: 10, nomeAutor: "Sophia Barbosa", avaliacao: 0, horarios: "6/18/2019 9:30:00 AM")
+        criarInteresse(titulo: "Aulas de violão", aprender: false, descricao: "Aulas para iniciantes", horaCadastro: "4/10/2019 7:35:15 PM", idAutor: 8, nomeAutor: "Sophia Barbosa", avaliacao: 0, horarios: "6/18/2019 9:30:00 AM")
         criarInteresse(titulo: "Aulas de Inglês", aprender: false, descricao: "Aulas do básico ao avançado: leitura, escrita e conversação", horaCadastro: "2/11/2019 4:15:34 PM", idAutor: 2, nomeAutor: "Olivia Jones", avaliacao: 0, horarios: "6/27/2019 10:00:00 AM")
         criarInteresse(titulo: "Kotlin", aprender: true, descricao: "Desenvolvimento mobile", horaCadastro: "3/13/2019 5:57:12 PM", idAutor: 1, nomeAutor: "Clark Andrews", avaliacao: 0, horarios: "6/18/2019 8:30:00 PM")
         criarInteresse(titulo: "Banco de dados", aprender: false, descricao: "Aulas sobre banco de dados com SQL", horaCadastro: "4/11/2019 1:12:13 PM", idAutor: 5, nomeAutor: "Matheus Soares", avaliacao: 0, horarios: "7/15/2019 9:00:00 AM")
@@ -60,9 +60,9 @@ class FeedViewController: UIViewController {
         table.delegate = self
         searchController.searchBar.scopeButtonTitles = ["Todos", "Ensinar", "Aprender"]
         searchController.searchBar.delegate = self
-        //limparUsuarios()
-        //criacaoDeUsuarios()
-        //criacaoInteresses()
+        limparUsuarios()
+        criacaoDeUsuarios()
+        criacaoInteresses()
     }
     
     func searchBarIsEmpty() -> Bool {

@@ -91,11 +91,10 @@ class PerfilViewController: UIViewController {
             email.text = usuario.email
             telefone.text = usuario.telefone
             nome.text = usuario.nome! + " " + usuario.sobrenome!
-            var resto = usuario.id % 2 == 0
+            let resto = usuario.id % 2 == 0
             capa.image = UIImage(named: resto ? "papel10" : "papel40")
             capa.layer.cornerRadius = 5
-            //blur.isHidden = true
-//            blur.isUserInteractionEnabled = true
+            ratingView.isHidden = interessesPorAutorEAprender(id: usuario.id, aprender: false) == []
         }
     }
 
@@ -110,15 +109,4 @@ class PerfilViewController: UIViewController {
     func presentLogin(){
         performSegue(withIdentifier: "entrar", sender: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
