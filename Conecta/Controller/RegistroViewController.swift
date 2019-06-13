@@ -25,6 +25,9 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var confirmarSenha: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var cancelarButton: UIButton!
+    @IBOutlet weak var salvarButton: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -37,6 +40,9 @@ class RegistroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         avatarNome = "avatar08"
+        
+        cancelarButton.layer.cornerRadius = 10
+        salvarButton.layer.cornerRadius = 10
     }
     
     @IBAction func trocaAvatar(_ sender: UIButton) {

@@ -26,6 +26,10 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var senha: UITextField!
     
+    @IBOutlet weak var registrarButton: UIButton!
+    @IBOutlet weak var entrarButton: UIButton!
+    @IBOutlet weak var cancelarButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //FirebaseApp.configure()
@@ -50,6 +54,10 @@ class LoginViewController: UIViewController, FUIAuthDelegate, GIDSignInUIDelegat
 //            guard let user = usuario?.user else { return }
 //
 //        }
+        
+        registrarButton.layer.cornerRadius = 10
+        entrarButton.layer.cornerRadius = 10
+        cancelarButton.layer.cornerRadius = 10
     }
     @IBAction func entrar(_ sender: UIButton) {
         if let email = email.text, let senha = senha.text{

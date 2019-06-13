@@ -10,6 +10,9 @@ import UIKit
 
 class AvatarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    
+    @IBOutlet weak var cancelarButton: UIButton!
+    
     let imagens = ["avatar01", "avatar02", "avatar03", "avatar04", "avatar05", "avatar06", "avatar07", "avatar08", "avatar10"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -34,6 +37,8 @@ class AvatarViewController: UIViewController, UICollectionViewDelegate, UICollec
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
+        
+        cancelarButton.layer.cornerRadius = 10
     }
     
     @IBAction func cancelar(_ sender: UIButton) {
