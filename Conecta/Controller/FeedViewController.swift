@@ -44,6 +44,12 @@ class FeedViewController: UIViewController {
         criarInteresse(titulo: "Matemática Básica", aprender: false, descricao: "Matemática para ensino médio", horaCadastro: "9/12/2019 1:27:18 PM", idAutor: 7, nomeAutor: "Antonio Moraes", avaliacao: 0, horarios: "11/11/2019 2:00:00 PM")
         criarInteresse(titulo: "Aulas de Francês", aprender: true, descricao: "Francês básico para conversação", horaCadastro: "1/5/2019 11:34:56 PM", idAutor: 2, nomeAutor: "Olivia Jones", avaliacao: 0, horarios: "3/29/2019 9:00:00 AM")
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        table.reloadData()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup the Search Controller
@@ -60,9 +66,9 @@ class FeedViewController: UIViewController {
         table.delegate = self
         searchController.searchBar.scopeButtonTitles = ["Todos", "Ensinar", "Aprender"]
         searchController.searchBar.delegate = self
-        limparUsuarios()
-        criacaoDeUsuarios()
-        criacaoInteresses()
+        //limparUsuarios()
+        //criacaoDeUsuarios()
+        //criacaoInteresses()
     }
     
     func searchBarIsEmpty() -> Bool {
@@ -129,37 +135,6 @@ extension FeedViewController: UITableViewDelegate{
         }
         performSegue(withIdentifier: "Detalhe", sender: dados)
     }
-//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        if(velocity.y>0) {
-//            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
-//            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-//                self.navigationController?.setNavigationBarHidden(true, animated: true)
-//                print("Hide")
-//            }, completion: nil)
-//            UIView.animate(withDuration: 3, delay: 0, options: UIView.AnimationOptions(), animations: {
-////                for button in self.buttons{
-////                    button.isHidden = true
-////                }
-//                self.stackView.isHidden = true
-//            }, completion: nil)
-//        } else {
-//            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-//                self.navigationController?.setNavigationBarHidden(false, animated: true)
-//                print("Unhide")
-//            }, completion: nil)
-//
-//            UIView.animate(withDuration: 3, delay: 0, options: UIView.AnimationOptions(), animations: {
-//                self.stackView.isHidden = false
-//            }, completion: nil)
-//
-////            UIView.animate(withDuration: 3, delay: 0, options: UIView.AnimationOptions(), animations: {
-//////                for button in self.buttons{
-//////                    button.isHidden = false
-//////                }
-////                self.stackView.animate
-////            }, completion: nil)
-//        }
-//    }
 }
 
 extension FeedViewController: UITableViewDataSource {

@@ -45,6 +45,9 @@ class EnsinarViewController: UIViewController {
         if let titulo = titulo.text, let descricao = descricao.text {
             let u = pegarUsuarioConectado()
             criarInteresse(titulo: titulo, aprender: false, descricao: descricao, horaCadastro: horaAtual(), idAutor: u!.id, nomeAutor: "\(u!.nome!) \(u!.sobrenome!)", avaliacao: 0.0, horarios: "")
+            toShow(title: "Parabéns! 😊", message: "Seu interesse de ensinar será mostrado no feed.")
+                self.titulo.text = ""
+                self.descricao.text = "Java API..."
         }
     }
     
